@@ -1,0 +1,1341 @@
+Binary file aodv/bindings/modulegen__gcc_ILP32.pyc matches
+aodv/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+aodv/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+aodv/bindings/modulegen__gcc_ILP32.py:    ## aodv-rqueue.h (module 'aodv'): void ns3::aodv::RequestQueue::DropPacketWithDst(ns3::Ipv4Address dst) [member function]
+aodv/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DropPacketWithDst', 
+aodv/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+aodv/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+aodv/bindings/modulegen__gcc_LP64.py:    ## aodv-rqueue.h (module 'aodv'): void ns3::aodv::RequestQueue::DropPacketWithDst(ns3::Ipv4Address dst) [member function]
+aodv/bindings/modulegen__gcc_LP64.py:    cls.add_method('DropPacketWithDst', 
+aodv/model/aodv-rqueue.h:  void DropPacketWithDst (Ipv4Address dst);
+aodv/model/aodv-rqueue.h:  void Drop (QueueEntry en, std::string reason);
+aodv/model/aodv-routing-protocol.cc:          NS_LOG_DEBUG ("Output device doesn't match. Dropped.");
+aodv/model/aodv-routing-protocol.cc:                NS_LOG_DEBUG ("Duplicated packet " << p->GetUid () << " from " << origin << ". Drop.");
+aodv/model/aodv-routing-protocol.cc:                    NS_LOG_DEBUG ("No route to forward broadcast. Drop packet " << p->GetUid ());
+aodv/model/aodv-routing-protocol.cc:                NS_LOG_DEBUG ("TTL exceeded. Drop packet " << p->GetUid ());
+aodv/model/aodv-routing-protocol.cc:              NS_LOG_DEBUG ("Drop packet " << p->GetUid () << " because no route to forward it.");
+aodv/model/aodv-routing-protocol.cc:  NS_LOG_DEBUG ("Drop packet " << p->GetUid () << " because no route to forward it.");
+aodv/model/aodv-routing-protocol.cc:      NS_LOG_DEBUG ("AODV message " << packet->GetUid () << " with unknown type received: " << tHeader.Get () << ". Drop");
+aodv/model/aodv-routing-protocol.cc:       * Drop RREQ, This node RREP wil make a loop.
+aodv/model/aodv-routing-protocol.cc:          NS_LOG_DEBUG ("Drop RREQ from " << src << ", dest next hop " << toDst.GetNextHop ());
+aodv/model/aodv-routing-protocol.cc:      NS_LOG_DEBUG ("Route not found. Drop all packets with dst " << dst);
+aodv/model/aodv-routing-protocol.cc:      m_queue.DropPacketWithDst (dst);
+aodv/model/aodv-routing-protocol.cc:      NS_LOG_DEBUG ("Route down. Stop search. Drop packet with destination " << dst);
+aodv/model/aodv-routing-protocol.cc:      m_queue.DropPacketWithDst (dst);
+aodv/model/aodv-routing-protocol.cc:          NS_LOG_DEBUG ("Output device doesn't match. Dropped.");
+aodv/model/aodv-rqueue.cc:      Drop (m_queue.front (), "Drop the most aged packet"); // Drop the most aged packet
+aodv/model/aodv-rqueue.cc:RequestQueue::DropPacketWithDst (Ipv4Address dst)
+aodv/model/aodv-rqueue.cc:          Drop (*i, "DropPacketWithDst ");
+aodv/model/aodv-rqueue.cc:          Drop (*i, "Drop outdated packet ");
+aodv/model/aodv-rqueue.cc:RequestQueue::Drop (QueueEntry en, std::string reason)
+aodv/test/aodv-test-suite.cc:  q.DropPacketWithDst (Ipv4Address ("1.2.3.4"));
+aodv/test/aodv-test-suite.cc:  q.DropPacketWithDst (Ipv4Address ("1.2.3.4"));
+Binary file applications/bindings/modulegen__gcc_ILP32.pyc matches
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue [class]
+applications/bindings/modulegen__gcc_ILP32.py:    module.add_class('DropTailQueue', import_from_module='ns.network', parent=root_module['ns3::Queue'])
+applications/bindings/modulegen__gcc_ILP32.py:    register_Ns3DropTailQueue_methods(root_module, root_module['ns3::DropTailQueue'])
+applications/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+applications/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+applications/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedBytes', 
+applications/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedPackets', 
+applications/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_method('Drop', 
+applications/bindings/modulegen__gcc_ILP32.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::forcedDrop [variable]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('forcedDrop', 'uint32_t', is_const=False)
+applications/bindings/modulegen__gcc_ILP32.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::qLimDrop [variable]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('qLimDrop', 'uint32_t', is_const=False)
+applications/bindings/modulegen__gcc_ILP32.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::unforcedDrop [variable]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('unforcedDrop', 'uint32_t', is_const=False)
+applications/bindings/modulegen__gcc_ILP32.py:def register_Ns3DropTailQueue_methods(root_module, cls):
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue(ns3::DropTailQueue const & arg0) [copy constructor]
+applications/bindings/modulegen__gcc_ILP32.py:    cls.add_constructor([param('ns3::DropTailQueue const &', 'arg0')])
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue() [constructor]
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::Queue::QueueMode ns3::DropTailQueue::GetMode() [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): static ns3::TypeId ns3::DropTailQueue::GetTypeId() [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): void ns3::DropTailQueue::SetMode(ns3::Queue::QueueMode mode) [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet> ns3::DropTailQueue::DoDequeue() [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): bool ns3::DropTailQueue::DoEnqueue(ns3::Ptr<ns3::Packet> p) [member function]
+applications/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet const> ns3::DropTailQueue::DoPeek() const [member function]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue [class]
+applications/bindings/modulegen__gcc_LP64.py:    module.add_class('DropTailQueue', import_from_module='ns.network', parent=root_module['ns3::Queue'])
+applications/bindings/modulegen__gcc_LP64.py:    register_Ns3DropTailQueue_methods(root_module, root_module['ns3::DropTailQueue'])
+applications/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+applications/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+applications/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedBytes', 
+applications/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedPackets', 
+applications/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_method('Drop', 
+applications/bindings/modulegen__gcc_LP64.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::forcedDrop [variable]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('forcedDrop', 'uint32_t', is_const=False)
+applications/bindings/modulegen__gcc_LP64.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::qLimDrop [variable]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('qLimDrop', 'uint32_t', is_const=False)
+applications/bindings/modulegen__gcc_LP64.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::unforcedDrop [variable]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('unforcedDrop', 'uint32_t', is_const=False)
+applications/bindings/modulegen__gcc_LP64.py:def register_Ns3DropTailQueue_methods(root_module, cls):
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue(ns3::DropTailQueue const & arg0) [copy constructor]
+applications/bindings/modulegen__gcc_LP64.py:    cls.add_constructor([param('ns3::DropTailQueue const &', 'arg0')])
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue() [constructor]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::Queue::QueueMode ns3::DropTailQueue::GetMode() [member function]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): static ns3::TypeId ns3::DropTailQueue::GetTypeId() [member function]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): void ns3::DropTailQueue::SetMode(ns3::Queue::QueueMode mode) [member function]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet> ns3::DropTailQueue::DoDequeue() [member function]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): bool ns3::DropTailQueue::DoEnqueue(ns3::Ptr<ns3::Packet> p) [member function]
+applications/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet const> ns3::DropTailQueue::DoPeek() const [member function]
+bridge/examples/csma-bridge.py:# - DropTail queues 
+bridge/examples/csma-bridge.cc:// - DropTail queues 
+bridge/examples/csma-bridge-one-hop.cc:// - DropTail queues 
+click/model/ipv4-l3-click-protocol.cc:                  NS_LOG_LOGIC ("Dropping received packet -- interface is down");
+click/examples/nsclick-ip-router.click:rt[1] -> DropBroadcasts
+click/examples/nsclick-ip-router.click:rt[2] -> DropBroadcasts
+click/helper/click-internet-stack-helper.cc:Ipv4L3ProtocolDropSinkWithoutContext (
+click/helper/click-internet-stack-helper.cc:  Ipv4L3Protocol::DropReason reason,
+click/helper/click-internet-stack-helper.cc:Ipv4L3ProtocolDropSinkWithContext (
+click/helper/click-internet-stack-helper.cc:  Ipv4L3Protocol::DropReason reason,
+click/helper/click-internet-stack-helper.cc:          asciiTraceHelper.HookDefaultDropSinkWithoutContext<ArpL3Protocol> (arpL3Protocol, "Drop", theStream);
+click/helper/click-internet-stack-helper.cc:          bool result = ipv4L3Protocol->TraceConnectWithoutContext ("Drop",
+click/helper/click-internet-stack-helper.cc:                                                                    MakeBoundCallback (&Ipv4L3ProtocolDropSinkWithoutContext,
+click/helper/click-internet-stack-helper.cc:                         "Unable to connect ipv4L3Protocol \"Drop\"");
+click/helper/click-internet-stack-helper.cc:      // For the ARP Drop, we are going to use the default trace sink provided by
+click/helper/click-internet-stack-helper.cc:      oss << "/NodeList/" << node->GetId () << "/$ns3::ArpL3Protocol/Drop";
+click/helper/click-internet-stack-helper.cc:      Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, stream));
+click/helper/click-internet-stack-helper.cc:      oss << "/NodeList/" << node->GetId () << "/$ns3::Ipv4L3Protocol/Drop";
+click/helper/click-internet-stack-helper.cc:      Config::Connect (oss.str (), MakeBoundCallback (&Ipv4L3ProtocolDropSinkWithContext, stream));
+Binary file csma/bindings/modulegen__gcc_ILP32.pyc matches
+csma/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+csma/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+csma/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+csma/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+csma/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+csma/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedBytes', 
+csma/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+csma/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedPackets', 
+csma/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+csma/bindings/modulegen__gcc_ILP32.py:    cls.add_method('Drop', 
+csma/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+csma/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+csma/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+csma/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+csma/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+csma/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedBytes', 
+csma/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+csma/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedPackets', 
+csma/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+csma/bindings/modulegen__gcc_LP64.py:    cls.add_method('Drop', 
+csma/model/csma-net-device.h:   * DropTail or RED.
+csma/model/csma-net-device.h:   * \see DropTailQueue
+csma/model/csma-net-device.h:   * \see class DropTailQueue
+csma/model/csma-net-device.h:  TracedCallback<Ptr<const Packet> > m_macTxDropTrace;
+csma/model/csma-net-device.h:  TracedCallback<Ptr<const Packet> > m_macRxDropTrace;
+csma/model/csma-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyTxDropTrace;
+csma/model/csma-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+csma/model/csma-net-device.cc:    .AddTraceSource ("MacTxDrop", 
+csma/model/csma-net-device.cc:                     MakeTraceSourceAccessor (&CsmaNetDevice::m_macTxDropTrace))
+csma/model/csma-net-device.cc:    .AddTraceSource ("MacRxDrop", 
+csma/model/csma-net-device.cc:                     MakeTraceSourceAccessor (&CsmaNetDevice::m_macRxDropTrace))
+csma/model/csma-net-device.cc:    .AddTraceSource ("PhyTxDrop", 
+csma/model/csma-net-device.cc:                     MakeTraceSourceAccessor (&CsmaNetDevice::m_phyTxDropTrace))
+csma/model/csma-net-device.cc:    .AddTraceSource ("PhyRxDrop", 
+csma/model/csma-net-device.cc:                     MakeTraceSourceAccessor (&CsmaNetDevice::m_phyRxDropTrace))
+csma/model/csma-net-device.cc:      m_phyTxDropTrace (m_currentPkt);
+csma/model/csma-net-device.cc:          m_phyTxDropTrace (m_currentPkt);
+csma/model/csma-net-device.cc:  m_phyTxDropTrace (m_currentPkt);
+csma/model/csma-net-device.cc:      m_phyRxDropTrace (packet);
+csma/model/csma-net-device.cc:      NS_LOG_LOGIC ("Dropping pkt due to error model ");
+csma/model/csma-net-device.cc:      m_phyRxDropTrace (packet);
+csma/model/csma-net-device.cc:      m_phyRxDropTrace (packet);
+csma/model/csma-net-device.cc:      m_macTxDropTrace (packet);
+csma/model/csma-net-device.cc:      m_macTxDropTrace (packet);
+csma/doc/csma.rst:* Drop:  A trace source for dropped packets.
+csma/doc/csma.rst:* A Drop operation source (see Queue::m_traceDrop).
+csma/doc/csma.rst:case. The reason for this behavior is due to the definition of the Queue Drop
+csma/doc/csma.rst:event. The m_traceDrop event is, by definition, fired when a packet cannot be
+csma/examples/csma-one-subnet.cc:// - DropTail queues 
+csma/helper/csma-helper.cc:  m_queueFactory.SetTypeId ("ns3::DropTailQueue");
+csma/helper/csma-helper.cc:      asciiTraceHelper.HookDefaultDropSinkWithoutContext<Queue> (queue, "Drop", theStream);
+csma/helper/csma-helper.cc:  oss << "/NodeList/" << nodeid << "/DeviceList/" << deviceid << "/$ns3::CsmaNetDevice/TxQueue/Drop";
+csma/helper/csma-helper.cc:  Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, stream));
+Binary file csma-layout/bindings/modulegen__gcc_ILP32.pyc matches
+csma-layout/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+csma-layout/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+csma-layout/bindings/modulegen__gcc_ILP32.py:    ## ipv6-l3-protocol.h (module 'internet'): ns3::Ipv6L3Protocol::DropReason [enumeration]
+csma-layout/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_UNKNOWN_PROTOCOL'], outer_class=root_module['ns3::Ipv6L3Protocol'], import_from_module='ns.internet')
+csma-layout/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+csma-layout/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+csma-layout/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+csma-layout/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+csma-layout/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+csma-layout/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+csma-layout/bindings/modulegen__gcc_LP64.py:    ## ipv6-l3-protocol.h (module 'internet'): ns3::Ipv6L3Protocol::DropReason [enumeration]
+csma-layout/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_UNKNOWN_PROTOCOL'], outer_class=root_module['ns3::Ipv6L3Protocol'], import_from_module='ns.internet')
+csma-layout/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+csma-layout/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+csma-layout/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+csma-layout/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+Binary file dsdv/bindings/modulegen__gcc_ILP32.pyc matches
+dsdv/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+dsdv/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+dsdv/bindings/modulegen__gcc_ILP32.py:    ## dsdv-packet-queue.h (module 'dsdv'): void ns3::dsdv::PacketQueue::DropPacketWithDst(ns3::Ipv4Address dst) [member function]
+dsdv/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DropPacketWithDst', 
+dsdv/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+dsdv/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+dsdv/bindings/modulegen__gcc_LP64.py:    ## dsdv-packet-queue.h (module 'dsdv'): void ns3::dsdv::PacketQueue::DropPacketWithDst(ns3::Ipv4Address dst) [member function]
+dsdv/bindings/modulegen__gcc_LP64.py:    cls.add_method('DropPacketWithDst', 
+dsdv/model/dsdv-packet-queue.h:  void DropPacketWithDst (Ipv4Address dst);
+dsdv/model/dsdv-packet-queue.h:  void Drop (QueueEntry en, std::string reason);
+dsdv/model/dsdv-routing-protocol.h:  Drop (Ptr<const Packet>, const Ipv4Header &, Socket::SocketErrno);
+dsdv/model/dsdv-packet-queue.cc:PacketQueue::DropPacketWithDst (Ipv4Address dst)
+dsdv/model/dsdv-packet-queue.cc:  NS_LOG_FUNCTION ("Dropping packet to " << dst);
+dsdv/model/dsdv-packet-queue.cc:          Drop (*i, "DropPacketWithDst ");
+dsdv/model/dsdv-packet-queue.cc:          NS_LOG_DEBUG ("Dropping outdated Packets");
+dsdv/model/dsdv-packet-queue.cc:          Drop (*i, "Drop outdated packet ");
+dsdv/model/dsdv-packet-queue.cc:PacketQueue::Drop (QueueEntry en, std::string reason)
+dsdv/model/dsdv-routing-protocol.cc:  m_ecb = MakeCallback (&RoutingProtocol::Drop,this);
+dsdv/model/dsdv-routing-protocol.cc:              NS_LOG_DEBUG ("Output device doesn't match. Dropped.");
+dsdv/model/dsdv-routing-protocol.cc:                  NS_LOG_DEBUG ("Output device doesn't match. Dropped.");
+dsdv/model/dsdv-routing-protocol.cc:                      NS_LOG_DEBUG ("No route to forward. Drop packet " << p->GetUid ());
+dsdv/model/dsdv-routing-protocol.cc:  NS_LOG_LOGIC ("Drop packet " << p->GetUid ()
+dsdv/model/dsdv-routing-protocol.cc:RoutingProtocol::Drop (Ptr<const Packet> packet,
+dsdv/model/dsdv-routing-protocol.cc:              NS_LOG_DEBUG ("Output device doesn't match. Dropped.");
+Binary file dsr/bindings/modulegen__gcc_ILP32.pyc matches
+dsr/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+dsr/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+dsr/bindings/modulegen__gcc_ILP32.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+dsr/bindings/modulegen__gcc_ILP32.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+dsr/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+dsr/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+dsr/bindings/modulegen__gcc_ILP32.py:    ## dsr-routing.h (module 'dsr'): uint8_t ns3::dsr::DsrRouting::Process(ns3::Ptr<ns3::Packet> & packet, ns3::Ipv4Header const & ipv4Header, ns3::Ipv4Address dst, uint8_t * nextHeader, uint8_t protocol, bool & isDropped) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('ns3::Ipv4Header const &', 'ipv4Header'), param('ns3::Ipv4Address', 'dst'), param('uint8_t *', 'nextHeader'), param('uint8_t', 'protocol'), param('bool &', 'isDropped')])
+dsr/bindings/modulegen__gcc_ILP32.py:    ## dsr-errorbuff.h (module 'dsr'): void ns3::dsr::ErrorBuffer::DropPacketForErrLink(ns3::Ipv4Address source, ns3::Ipv4Address nextHop) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DropPacketForErrLink', 
+dsr/bindings/modulegen__gcc_ILP32.py:    ## dsr-maintain-buff.h (module 'dsr'): void ns3::dsr::MaintainBuffer::DropPacketWithNextHop(ns3::Ipv4Address nextHop) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DropPacketWithNextHop', 
+dsr/bindings/modulegen__gcc_ILP32.py:    ## dsr-rsendbuff.h (module 'dsr'): void ns3::dsr::SendBuffer::DropPacketWithDst(ns3::Ipv4Address dst) [member function]
+dsr/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DropPacketWithDst', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+dsr/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+dsr/bindings/modulegen__gcc_LP64.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## dsr-routing.h (module 'dsr'): uint8_t ns3::dsr::DsrRouting::Process(ns3::Ptr<ns3::Packet> & packet, ns3::Ipv4Header const & ipv4Header, ns3::Ipv4Address dst, uint8_t * nextHeader, uint8_t protocol, bool & isDropped) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('ns3::Ipv4Header const &', 'ipv4Header'), param('ns3::Ipv4Address', 'dst'), param('uint8_t *', 'nextHeader'), param('uint8_t', 'protocol'), param('bool &', 'isDropped')])
+dsr/bindings/modulegen__gcc_LP64.py:    ## dsr-errorbuff.h (module 'dsr'): void ns3::dsr::ErrorBuffer::DropPacketForErrLink(ns3::Ipv4Address source, ns3::Ipv4Address nextHop) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('DropPacketForErrLink', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## dsr-maintain-buff.h (module 'dsr'): void ns3::dsr::MaintainBuffer::DropPacketWithNextHop(ns3::Ipv4Address nextHop) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('DropPacketWithNextHop', 
+dsr/bindings/modulegen__gcc_LP64.py:    ## dsr-rsendbuff.h (module 'dsr'): void ns3::dsr::SendBuffer::DropPacketWithDst(ns3::Ipv4Address dst) [member function]
+dsr/bindings/modulegen__gcc_LP64.py:    cls.add_method('DropPacketWithDst', 
+dsr/model/dsr-rreq-table.cc:       * Drop the most aged packet when buffer reaches to max
+dsr/model/dsr-rreq-table.cc:       * Drop the most aged packet when buffer reaches to max
+dsr/model/dsr-rsendbuff.cc:   * Drop the most aged packet when buffer reaches to max
+dsr/model/dsr-rsendbuff.cc:      Drop (m_sendBuffer.front (), "Drop the most aged packet");         // Drop the most aged packet
+dsr/model/dsr-rsendbuff.cc:SendBuffer::DropPacketWithDst (Ipv4Address dst)
+dsr/model/dsr-rsendbuff.cc:   * Drop the packet with destination address dst
+dsr/model/dsr-rsendbuff.cc:          Drop (*i, "DropPacketWithDst");
+dsr/model/dsr-rsendbuff.cc:          NS_LOG_DEBUG ("Dropping Queue Packets");
+dsr/model/dsr-rsendbuff.cc:          Drop (*i, "Drop out-dated packet ");
+dsr/model/dsr-rsendbuff.cc:SendBuffer::Drop (SendBuffEntry en, std::string reason)
+dsr/model/dsr-maintain-buff.h:  void DropPacketWithNextHop (Ipv4Address nextHop);
+dsr/model/dsr-rcache.cc:       * \brief Drop the most aged packet when buffer reaches to max
+dsr/model/dsr-rcache.cc:          RemoveLastEntry (rtVector);         // Drop the last entry for the sorted route cache, the route has already been sorted
+dsr/model/dsr-options.cc:      NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:      NS_LOG_LOGIC ("Duplicate request. Drop!");
+dsr/model/dsr-options.cc:          NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:                    NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:                      NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:          NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:          NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:      NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-options.cc:      NS_LOG_LOGIC ("Malformed header. Drop!");
+dsr/model/dsr-routing.h:   * \param isDropped if the packet must be dropped
+dsr/model/dsr-routing.h:  uint8_t Process (Ptr<Packet>& packet, Ipv4Header const& ipv4Header, Ipv4Address dst, uint8_t *nextHeader, uint8_t protocol, bool& isDropped);
+dsr/model/dsr-routing.h:   * \brief Drop trace callback.
+dsr/model/dsr-errorbuff.cc:   * Drop the most aged packet when buffer reaches to max
+dsr/model/dsr-errorbuff.cc:      Drop (m_errorBuffer.front (), "Drop the most aged packet");         // Drop the most aged packet
+dsr/model/dsr-errorbuff.cc:ErrorBuffer::DropPacketForErrLink (Ipv4Address source, Ipv4Address nextHop)
+dsr/model/dsr-errorbuff.cc:   * Drop the packet with the error link source----------nextHop
+dsr/model/dsr-errorbuff.cc:          DropLink (*i, "DropPacketForErrLink");
+dsr/model/dsr-errorbuff.cc:          NS_LOG_DEBUG ("Dropping Queue Packets");
+dsr/model/dsr-errorbuff.cc:          Drop (*i, "Drop out-dated packet ");
+dsr/model/dsr-errorbuff.cc:ErrorBuffer::Drop (ErrorBuffEntry en, std::string reason)
+dsr/model/dsr-errorbuff.cc:ErrorBuffer::DropLink (ErrorBuffEntry en, std::string reason)
+dsr/model/dsr-passive-buff.cc:   * Drop the most aged packet when buffer reaches to max
+dsr/model/dsr-passive-buff.cc:      Drop (m_passiveBuffer.front (), "Drop the most aged packet");         // Drop the most aged packet
+dsr/model/dsr-passive-buff.cc:          NS_LOG_DEBUG ("Dropping Queue Packets");
+dsr/model/dsr-passive-buff.cc:          Drop (*i, "Drop out-dated packet ");
+dsr/model/dsr-passive-buff.cc:PassiveBuffer::Drop (PassiveBuffEntry en, std::string reason)
+dsr/model/dsr-passive-buff.cc:PassiveBuffer::DropLink (PassiveBuffEntry en, std::string reason)
+dsr/model/dsr-errorbuff.h:  void DropPacketForErrLink (Ipv4Address source, Ipv4Address nextHop);
+dsr/model/dsr-errorbuff.h:  void Drop (ErrorBuffEntry en, std::string reason);
+dsr/model/dsr-errorbuff.h:  void DropLink (ErrorBuffEntry en, std::string reason);
+dsr/model/dsr-routing.cc:    .AddTraceSource ("Drop", "Drop DSR packet",
+dsr/model/dsr-routing.cc:  m_errorBuffer.DropPacketForErrLink (source, nextHop);
+dsr/model/dsr-routing.cc:  m_errorBuffer.DropPacketForErrLink (m_mainAddress, nextHop);
+dsr/model/dsr-routing.cc:      NS_LOG_INFO ("Drop packet. Not handling ICMP packet for now");
+dsr/model/dsr-routing.cc:      NS_LOG_DEBUG ("Route not found. Drop packet with dst " << dst);
+dsr/model/dsr-routing.cc:      m_sendBuffer.DropPacketWithDst (dst);
+dsr/model/dsr-routing.cc:      NS_LOG_LOGIC ("Unknown Option. Drop!");
+dsr/model/dsr-options.h:   * \brief Drop trace callback.
+dsr/model/dsr-rsendbuff.h:  void DropPacketWithDst (Ipv4Address dst);
+dsr/model/dsr-rsendbuff.h:  void Drop (SendBuffEntry en, std::string reason);             ///< Notify that packet is dropped from queue by timeout
+dsr/model/dsr-maintain-buff.cc:      NS_LOG_DEBUG ("Drop the most aged packet");
+dsr/model/dsr-maintain-buff.cc:      m_maintainBuffer.erase (m_maintainBuffer.begin ());        // Drop the most aged packet
+dsr/model/dsr-maintain-buff.cc:MaintainBuffer::DropPacketWithNextHop (Ipv4Address nextHop)
+dsr/model/dsr-maintain-buff.cc:  NS_LOG_INFO ("Drop Packet With next hop " << nextHop);
+dsr/model/dsr-passive-buff.h:  void Drop (PassiveBuffEntry en, std::string reason);
+dsr/model/dsr-passive-buff.h:  void DropLink (PassiveBuffEntry en, std::string reason);
+dsr/test/dsr-test-suite.cc:  q.DropPacketWithDst (Ipv4Address ("0.0.0.1"));
+dsr/test/dsr-test-suite.cc:  q.DropPacketWithDst (Ipv4Address ("0.0.0.4"));
+Binary file emu/bindings/modulegen__gcc_ILP32.pyc matches
+emu/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+emu/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+emu/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+emu/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+emu/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+emu/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+emu/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+emu/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+emu/model/emu-net-device.h:   * method such as DropTail or RED.
+emu/model/emu-net-device.h:   * @see DropTailQueue
+emu/model/emu-net-device.h:   * @see class DropTailQueue
+emu/model/emu-net-device.h:  TracedCallback<Ptr<const Packet> > m_macTxDropTrace;
+emu/model/emu-net-device.h:  TracedCallback<Ptr<const Packet> > m_macRxDropTrace;
+emu/model/emu-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyTxDropTrace;
+emu/model/emu-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+emu/model/emu-net-device.cc:    .AddTraceSource ("MacTxDrop", 
+emu/model/emu-net-device.cc:                     MakeTraceSourceAccessor (&EmuNetDevice::m_macTxDropTrace))
+emu/model/emu-net-device.cc:    .AddTraceSource ("MacRxDrop", 
+emu/model/emu-net-device.cc:                     MakeTraceSourceAccessor (&EmuNetDevice::m_macRxDropTrace))
+emu/model/emu-net-device.cc:    .AddTraceSource ("PhyTxDrop", 
+emu/model/emu-net-device.cc:                     MakeTraceSourceAccessor (&EmuNetDevice::m_phyTxDropTrace))
+emu/model/emu-net-device.cc:    .AddTraceSource ("PhyRxDrop", 
+emu/model/emu-net-device.cc:                     MakeTraceSourceAccessor (&EmuNetDevice::m_phyRxDropTrace))
+emu/model/emu-net-device.cc:      m_phyRxDropTrace (originalPacket);
+emu/model/emu-net-device.cc:              m_phyRxDropTrace (originalPacket);
+emu/model/emu-net-device.cc:      m_macTxDropTrace (packet);
+emu/doc/emu.rst:* A Drop operation source (see Queue::m_traceDrop).
+emu/examples/emu-udp-echo.cc:// - DropTail queues 
+emu/examples/emu-ping.cc:  Ptr<Queue> queue = CreateObject<DropTailQueue> ();
+emu/helper/emu-helper.cc:  m_queueFactory.SetTypeId ("ns3::DropTailQueue");
+emu/helper/emu-helper.cc:      asciiTraceHelper.HookDefaultDropSinkWithoutContext<Queue> (queue, "Drop", theStream);
+emu/helper/emu-helper.cc:  oss << "/NodeList/" << nodeid << "/DeviceList/" << deviceid << "/$ns3::EmuNetDevice/TxQueue/Drop";
+emu/helper/emu-helper.cc:  Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, stream));
+Binary file energy/bindings/modulegen__gcc_ILP32.pyc matches
+energy/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+energy/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+energy/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+energy/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+energy/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+energy/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+energy/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+energy/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+Binary file fd-net-device/bindings/modulegen__gcc_ILP32.pyc matches
+fd-net-device/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+fd-net-device/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+fd-net-device/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+fd-net-device/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+fd-net-device/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+fd-net-device/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+fd-net-device/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+fd-net-device/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+fd-net-device/model/fd-net-device.cc:    .AddTraceSource ("MacTxDrop",
+fd-net-device/model/fd-net-device.cc:                     MakeTraceSourceAccessor (&FdNetDevice::m_macTxDropTrace))
+fd-net-device/model/fd-net-device.cc:      m_phyRxDropTrace (originalPacket);
+fd-net-device/model/fd-net-device.cc:          m_phyRxDropTrace (originalPacket);
+fd-net-device/model/fd-net-device.cc:      m_macTxDropTrace (packet);
+fd-net-device/model/fd-net-device.cc:      m_macTxDropTrace (packet);
+fd-net-device/model/fd-net-device.h:  TracedCallback<Ptr<const Packet> > m_macTxDropTrace;
+fd-net-device/model/fd-net-device.h:  TracedCallback<Ptr<const Packet> > m_macRxDropTrace;
+fd-net-device/model/fd-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyTxDropTrace;
+fd-net-device/model/fd-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+fd-net-device/doc/fd-net-device.rst:* ``MaxTxDrop``:  Trace source if write to file descriptor fails
+fd-net-device/examples/fd-emu-udp-echo.cc:// - DropTail queues
+fd-net-device/examples/fd-emu-ping.cc:  //Ptr<Queue> queue = CreateObject<DropTailQueue> ();
+Binary file flow-monitor/bindings/modulegen__gcc_ILP32.pyc matches
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## ipv4-flow-probe.h (module 'flow-monitor'): ns3::Ipv4FlowProbe::DropReason [enumeration]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_NO_ROUTE', 'DROP_TTL_EXPIRE', 'DROP_BAD_CHECKSUM', 'DROP_QUEUE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT', 'DROP_INVALID_REASON'], outer_class=root_module['ns3::Ipv4FlowProbe'])
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## flow-monitor.h (module 'flow-monitor'): void ns3::FlowMonitor::ReportDrop(ns3::Ptr<ns3::FlowProbe> probe, ns3::FlowId flowId, ns3::FlowPacketId packetId, uint32_t packetSize, uint32_t reasonCode) [member function]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    cls.add_method('ReportDrop', 
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## flow-monitor.h (module 'flow-monitor'): ns3::FlowMonitor::FlowStats::bytesDropped [variable]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('bytesDropped', 'std::vector< unsigned long long >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## flow-monitor.h (module 'flow-monitor'): ns3::FlowMonitor::FlowStats::packetsDropped [variable]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('packetsDropped', 'std::vector< unsigned int >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## flow-probe.h (module 'flow-monitor'): void ns3::FlowProbe::AddPacketDropStats(ns3::FlowId flowId, uint32_t packetSize, uint32_t reasonCode) [member function]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    cls.add_method('AddPacketDropStats', 
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## flow-probe.h (module 'flow-monitor'): ns3::FlowProbe::FlowStats::bytesDropped [variable]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('bytesDropped', 'std::vector< unsigned long long >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    ## flow-probe.h (module 'flow-monitor'): ns3::FlowProbe::FlowStats::packetsDropped [variable]
+flow-monitor/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('packetsDropped', 'std::vector< unsigned int >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## ipv4-flow-probe.h (module 'flow-monitor'): ns3::Ipv4FlowProbe::DropReason [enumeration]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_NO_ROUTE', 'DROP_TTL_EXPIRE', 'DROP_BAD_CHECKSUM', 'DROP_QUEUE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT', 'DROP_INVALID_REASON'], outer_class=root_module['ns3::Ipv4FlowProbe'])
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## flow-monitor.h (module 'flow-monitor'): void ns3::FlowMonitor::ReportDrop(ns3::Ptr<ns3::FlowProbe> probe, ns3::FlowId flowId, ns3::FlowPacketId packetId, uint32_t packetSize, uint32_t reasonCode) [member function]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    cls.add_method('ReportDrop', 
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## flow-monitor.h (module 'flow-monitor'): ns3::FlowMonitor::FlowStats::bytesDropped [variable]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('bytesDropped', 'std::vector< unsigned long >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## flow-monitor.h (module 'flow-monitor'): ns3::FlowMonitor::FlowStats::packetsDropped [variable]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('packetsDropped', 'std::vector< unsigned int >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## flow-probe.h (module 'flow-monitor'): void ns3::FlowProbe::AddPacketDropStats(ns3::FlowId flowId, uint32_t packetSize, uint32_t reasonCode) [member function]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    cls.add_method('AddPacketDropStats', 
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## flow-probe.h (module 'flow-monitor'): ns3::FlowProbe::FlowStats::bytesDropped [variable]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('bytesDropped', 'std::vector< unsigned long >', is_const=False)
+flow-monitor/bindings/modulegen__gcc_LP64.py:    ## flow-probe.h (module 'flow-monitor'): ns3::FlowProbe::FlowStats::packetsDropped [variable]
+flow-monitor/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('packetsDropped', 'std::vector< unsigned int >', is_const=False)
+flow-monitor/model/ipv4-flow-probe.cc:  if (!ipv4->TraceConnectWithoutContext ("Drop",
+flow-monitor/model/ipv4-flow-probe.cc:                                         MakeCallback (&Ipv4FlowProbe::DropLogger, Ptr<Ipv4FlowProbe> (this))))
+flow-monitor/model/ipv4-flow-probe.cc:  oss << "/NodeList/" << node->GetId () << "/DeviceList/*/TxQueue/Drop";
+flow-monitor/model/ipv4-flow-probe.cc:  Config::ConnectWithoutContext (oss.str (), MakeCallback (&Ipv4FlowProbe::QueueDropLogger, Ptr<Ipv4FlowProbe> (this)));
+flow-monitor/model/ipv4-flow-probe.cc:Ipv4FlowProbe::DropLogger (const Ipv4Header &ipHeader, Ptr<const Packet> ipPayload,
+flow-monitor/model/ipv4-flow-probe.cc:                           Ipv4L3Protocol::DropReason reason, Ptr<Ipv4> ipv4, uint32_t ifIndex)
+flow-monitor/model/ipv4-flow-probe.cc:      NS_LOG_DEBUG ("Drop ("<<this<<", "<<flowId<<", "<<packetId<<", "<<size<<", " << reason 
+flow-monitor/model/ipv4-flow-probe.cc:      DropReason myReason;
+flow-monitor/model/ipv4-flow-probe.cc:      m_flowMonitor->ReportDrop (this, flowId, packetId, size, myReason);
+flow-monitor/model/ipv4-flow-probe.cc:Ipv4FlowProbe::QueueDropLogger (Ptr<const Packet> ipPayload)
+flow-monitor/model/ipv4-flow-probe.cc:  NS_LOG_DEBUG ("Drop ("<<this<<", "<<flowId<<", "<<packetId<<", "<<size<<", " << DROP_QUEUE 
+flow-monitor/model/ipv4-flow-probe.cc:  m_flowMonitor->ReportDrop (this, flowId, packetId, size, DROP_QUEUE);
+flow-monitor/model/flow-probe.cc:FlowProbe::AddPacketDropStats (FlowId flowId, uint32_t packetSize, uint32_t reasonCode)
+flow-monitor/model/flow-probe.cc:  if (flow.packetsDropped.size () < reasonCode + 1)
+flow-monitor/model/flow-probe.cc:      flow.packetsDropped.resize (reasonCode + 1, 0);
+flow-monitor/model/flow-probe.cc:      flow.bytesDropped.resize (reasonCode + 1, 0);
+flow-monitor/model/flow-probe.cc:  ++flow.packetsDropped[reasonCode];
+flow-monitor/model/flow-probe.cc:  flow.bytesDropped[reasonCode] += packetSize;
+flow-monitor/model/flow-probe.cc:      for (uint32_t reasonCode = 0; reasonCode < iter->second.packetsDropped.size (); reasonCode++)
+flow-monitor/model/flow-probe.cc:          os << "<packetsDropped reasonCode=\"" << reasonCode << "\""
+flow-monitor/model/flow-probe.cc:             << " number=\"" << iter->second.packetsDropped[reasonCode]
+flow-monitor/model/flow-probe.cc:      for (uint32_t reasonCode = 0; reasonCode < iter->second.bytesDropped.size (); reasonCode++)
+flow-monitor/model/flow-probe.cc:          os << "<bytesDropped reasonCode=\"" << reasonCode << "\""
+flow-monitor/model/flow-probe.cc:             << " bytes=\"" << iter->second.bytesDropped[reasonCode]
+flow-monitor/model/flow-probe.h:    /// packetsDropped[reasonCode] => number of dropped packets
+flow-monitor/model/flow-probe.h:    std::vector<uint32_t> packetsDropped;
+flow-monitor/model/flow-probe.h:    /// bytesDropped[reasonCode] => number of dropped bytes
+flow-monitor/model/flow-probe.h:    std::vector<uint64_t> bytesDropped;
+flow-monitor/model/flow-probe.h:  void AddPacketDropStats (FlowId flowId, uint32_t packetSize, uint32_t reasonCode);
+flow-monitor/model/flow-monitor.h:    std::vector<uint32_t> packetsDropped; // packetsDropped[reasonCode] => number of dropped packets
+flow-monitor/model/flow-monitor.h:    /// comment in attribute packetsDropped.
+flow-monitor/model/flow-monitor.h:    std::vector<uint64_t> bytesDropped; // bytesDropped[reasonCode] => number of dropped bytes
+flow-monitor/model/flow-monitor.h:  void ReportDrop (Ptr<FlowProbe> probe, FlowId flowId, FlowPacketId packetId,
+flow-monitor/model/ipv4-flow-probe.h:  enum DropReason 
+flow-monitor/model/ipv4-flow-probe.h:    /// with a Drop trace source.  It currently works with Csma and
+flow-monitor/model/ipv4-flow-probe.h:  void DropLogger (const Ipv4Header &ipHeader, Ptr<const Packet> ipPayload,
+flow-monitor/model/ipv4-flow-probe.h:                   Ipv4L3Protocol::DropReason reason, Ptr<Ipv4> ipv4, uint32_t ifIndex);
+flow-monitor/model/ipv4-flow-probe.h:  void QueueDropLogger (Ptr<const Packet> ipPayload);
+flow-monitor/model/flow-monitor.cc:FlowMonitor::ReportDrop (Ptr<FlowProbe> probe, uint32_t flowId, uint32_t packetId, uint32_t packetSize,
+flow-monitor/model/flow-monitor.cc:  probe->AddPacketDropStats (flowId, packetSize, reasonCode);
+flow-monitor/model/flow-monitor.cc:  if (stats.packetsDropped.size () < reasonCode + 1)
+flow-monitor/model/flow-monitor.cc:      stats.packetsDropped.resize (reasonCode + 1, 0);
+flow-monitor/model/flow-monitor.cc:      stats.bytesDropped.resize (reasonCode + 1, 0);
+flow-monitor/model/flow-monitor.cc:  ++stats.packetsDropped[reasonCode];
+flow-monitor/model/flow-monitor.cc:  stats.bytesDropped[reasonCode] += packetSize;
+flow-monitor/model/flow-monitor.cc:  NS_LOG_DEBUG ("++stats.packetsDropped[" << reasonCode<< "]; // becomes: " << stats.packetsDropped[reasonCode]);
+flow-monitor/model/flow-monitor.cc:      NS_LOG_DEBUG ("ReportDrop: removing tracked packet (flowId="
+flow-monitor/model/flow-monitor.cc:      for (uint32_t reasonCode = 0; reasonCode < flowI->second.packetsDropped.size (); reasonCode++)
+flow-monitor/model/flow-monitor.cc:          os << "<packetsDropped reasonCode=\"" << reasonCode << "\""
+flow-monitor/model/flow-monitor.cc:          << " number=\"" << flowI->second.packetsDropped[reasonCode]
+flow-monitor/model/flow-monitor.cc:      for (uint32_t reasonCode = 0; reasonCode < flowI->second.bytesDropped.size (); reasonCode++)
+flow-monitor/model/flow-monitor.cc:          os << "<bytesDropped reasonCode=\"" << reasonCode << "\""
+flow-monitor/model/flow-monitor.cc:          << " bytes=\"" << flowI->second.bytesDropped[reasonCode]
+flow-monitor/examples/wifi-olsr-flowmon.py:        for reason, drops in enumerate(st.packetsDropped):
+flow-monitor/examples/wifi-olsr-flowmon.py:        #for reason, drops in enumerate(st.bytesDropped):
+Binary file internet/bindings/modulegen__gcc_ILP32.pyc matches
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+internet/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'])
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-l3-protocol.h (module 'internet'): ns3::Ipv6L3Protocol::DropReason [enumeration]
+internet/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_UNKNOWN_PROTOCOL'], outer_class=root_module['ns3::Ipv6L3Protocol'])
+internet/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+internet/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6Extension::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6Extension::ProcessOptions(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, uint8_t length, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('uint8_t', 'length'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionAH::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionDestination::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionESP::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionFragment::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionHopByHop::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionRouting::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_ILP32.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionLooseRouting::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_ILP32.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+internet/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'])
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-l3-protocol.h (module 'internet'): ns3::Ipv6L3Protocol::DropReason [enumeration]
+internet/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_UNKNOWN_PROTOCOL'], outer_class=root_module['ns3::Ipv6L3Protocol'])
+internet/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+internet/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+internet/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+internet/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6Extension::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6Extension::ProcessOptions(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, uint8_t length, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('uint8_t', 'length'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionAH::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionDestination::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionESP::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionFragment::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionHopByHop::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionRouting::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/bindings/modulegen__gcc_LP64.py:    ## ipv6-extension.h (module 'internet'): uint8_t ns3::Ipv6ExtensionLooseRouting::Process(ns3::Ptr<ns3::Packet> & packet, uint8_t offset, ns3::Ipv6Header const & ipv6Header, ns3::Ipv6Address dst, uint8_t * nextHeader, bool & isDropped) [member function]
+internet/bindings/modulegen__gcc_LP64.py:                   [param('ns3::Ptr< ns3::Packet > &', 'packet'), param('uint8_t', 'offset'), param('ns3::Ipv6Header const &', 'ipv6Header'), param('ns3::Ipv6Address', 'dst'), param('uint8_t *', 'nextHeader'), param('bool &', 'isDropped')], 
+internet/model/ipv6-extension.cc:    .AddTraceSource ("Drop", "Drop IPv6 packet",
+internet/model/ipv6-extension.cc:uint8_t Ipv6Extension::ProcessOptions (Ptr<Packet>& packet, uint8_t offset, uint8_t length, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << length << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:  while (length > processedSize && !isDropped)
+internet/model/ipv6-extension.cc:              NS_LOG_LOGIC ("Unknown Option. Drop!");
+internet/model/ipv6-extension.cc:              isDropped = true;
+internet/model/ipv6-extension.cc:              NS_LOG_LOGIC ("Unknown Option. Drop!");
+internet/model/ipv6-extension.cc:              isDropped = true;
+internet/model/ipv6-extension.cc:              NS_LOG_LOGIC ("Unknown Option. Drop!");
+internet/model/ipv6-extension.cc:                  isDropped = true;
+internet/model/ipv6-extension.cc:              isDropped = true;
+internet/model/ipv6-extension.cc:          optionLength = ipv6Option->Process (packet, offset + processedSize, ipv6Header, isDropped);
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionHopByHop::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:  processedSize += ProcessOptions (packet, offset, length, ipv6Header, dst, nextHeader, isDropped);
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionDestination::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:  processedSize += ProcessOptions (packet, offset, length, ipv6Header, dst, nextHeader, isDropped);
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionFragment::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:      isDropped = false;
+internet/model/ipv6-extension.cc:      isDropped = true;
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionRouting::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:          isDropped = false;
+internet/model/ipv6-extension.cc:          NS_LOG_LOGIC ("Malformed header. Drop!");
+internet/model/ipv6-extension.cc:          isDropped = true;
+internet/model/ipv6-extension.cc:  return ipv6ExtensionRouting->Process (packet, offset, ipv6Header, dst, (uint8_t *)0, isDropped);
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionLooseRouting::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:      isDropped = false;
+internet/model/ipv6-extension.cc:      NS_LOG_LOGIC ("Malformed header. Drop!");
+internet/model/ipv6-extension.cc:      isDropped = true;
+internet/model/ipv6-extension.cc:      NS_LOG_LOGIC ("Malformed header. Drop!");
+internet/model/ipv6-extension.cc:      isDropped = true;
+internet/model/ipv6-extension.cc:      isDropped = true;
+internet/model/ipv6-extension.cc:      NS_LOG_LOGIC ("Time Exceeded : Hop Limit <= 1. Drop!");
+internet/model/ipv6-extension.cc:      isDropped = true;
+internet/model/ipv6-extension.cc:  isDropped = true;
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionESP::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv6-extension.cc:uint8_t Ipv6ExtensionAH::Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped)
+internet/model/ipv6-extension.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << dst << nextHeader << isDropped);
+internet/model/ipv4-l3-protocol.cc:    .AddTraceSource ("Drop", "Drop ipv4 packet",
+internet/model/ipv4-l3-protocol.cc:              NS_LOG_LOGIC ("Dropping received packet -- interface is down");
+internet/model/ipv4-l3-protocol.cc:      NS_LOG_LOGIC ("Dropping received packet -- checksum not ok");
+internet/model/ipv4-l3-protocol.cc:      NS_LOG_WARN ("No route found for forwarding packet.  Drop.");
+internet/model/ipv4-l3-protocol.cc:      NS_LOG_WARN ("No route to host.  Drop.");
+internet/model/ipv4-l3-protocol.cc:      NS_LOG_WARN ("No route to host.  Drop.");
+internet/model/ipv4-l3-protocol.cc:          NS_LOG_LOGIC ("Dropping -- outgoing interface is down: " << route->GetGateway ());
+internet/model/ipv4-l3-protocol.cc:          NS_LOG_LOGIC ("Dropping -- outgoing interface is down: " << ipHeader.GetDestination ());
+internet/model/ipv4-l3-protocol.cc:          NS_LOG_WARN ("TTL exceeded.  Drop.");
+internet/model/ipv4-l3-protocol.cc:      NS_LOG_WARN ("TTL exceeded.  Drop.");
+internet/model/arp-l3-protocol.cc:    .AddTraceSource ("Drop",
+Binary file internet/model/.ipv4-l3-protocol.h.swp matches
+internet/model/ipv6-l3-protocol.h: * the packet.  In contrast, the Drop, SendOutgoing, UnicastForward,
+internet/model/ipv6-l3-protocol.h:   * \enum DropReason
+internet/model/ipv6-l3-protocol.h:  enum DropReason 
+internet/model/ipv6-l3-protocol.h:  TracedCallback<const Ipv6Header &, Ptr<const Packet>, DropReason, Ptr<Ipv6>, uint32_t> m_dropTrace;
+internet/model/ipv4-l3-protocol.h: * the packet.  In contrast, the Drop, SendOutgoing, UnicastForward,
+internet/model/ipv4-l3-protocol.h:   * \enum DropReason
+internet/model/ipv4-l3-protocol.h:  enum DropReason 
+internet/model/ipv4-l3-protocol.h:  TracedCallback<const Ipv4Header &, Ptr<const Packet>, DropReason, Ptr<Ipv4>, uint32_t> m_dropTrace;
+internet/model/ipv6-option.cc:uint8_t Ipv6OptionPad1::Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped)
+internet/model/ipv6-option.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << isDropped);
+internet/model/ipv6-option.cc:  isDropped = false;
+internet/model/ipv6-option.cc:uint8_t Ipv6OptionPadn::Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped)
+internet/model/ipv6-option.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << isDropped);
+internet/model/ipv6-option.cc:  isDropped = false;
+internet/model/ipv6-option.cc:uint8_t Ipv6OptionJumbogram::Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped)
+internet/model/ipv6-option.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << isDropped);
+internet/model/ipv6-option.cc:  isDropped = false;
+internet/model/ipv6-option.cc:uint8_t Ipv6OptionRouterAlert::Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped)
+internet/model/ipv6-option.cc:  NS_LOG_FUNCTION (this << packet << offset << ipv6Header << isDropped);
+internet/model/ipv6-option.cc:  isDropped = false;
+Binary file internet/model/.ipv4-l3-protocol.cc.swp matches
+internet/model/ipv6-option.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-option.h:  virtual uint8_t Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped) = 0;
+internet/model/ipv6-option.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-option.h:  virtual uint8_t Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped);
+internet/model/ipv6-option.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-option.h:  virtual uint8_t Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped);
+internet/model/ipv6-option.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-option.h:  virtual uint8_t Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped);
+internet/model/ipv6-option.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-option.h:  virtual uint8_t Process (Ptr<Packet> packet, uint8_t offset, Ipv6Header const& ipv6Header, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped) = 0;
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t ProcessOptions (Ptr<Packet>& packet, uint8_t offset, uint8_t length, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \brief Drop trace callback.
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-extension.h:   * \param isDropped if the packet must be dropped
+internet/model/ipv6-extension.h:  virtual uint8_t Process (Ptr<Packet>& packet, uint8_t offset, Ipv6Header const& ipv6Header, Ipv6Address dst, uint8_t *nextHeader, bool& isDropped);
+internet/model/ipv6-l3-protocol.cc:    .AddTraceSource ("Drop", "Drop IPv6 packet",
+internet/model/ipv6-l3-protocol.cc:              NS_LOG_LOGIC ("Dropping received packet-- interface is down");
+internet/model/ipv6-l3-protocol.cc:  bool isDropped = false;
+internet/model/ipv6-l3-protocol.cc:          ipv6Extension->Process (packet, 0, hdr, hdr.GetDestinationAddress (), (uint8_t *)0, isDropped);
+internet/model/ipv6-l3-protocol.cc:      if (isDropped)
+internet/model/ipv6-l3-protocol.cc:      NS_LOG_WARN ("No route found for forwarding packet.  Drop.");
+internet/model/ipv6-l3-protocol.cc:          NS_LOG_LOGIC ("Dropping-- outgoing interface is down: " << route->GetGateway ());
+internet/model/ipv6-l3-protocol.cc:          NS_LOG_LOGIC ("Dropping-- outgoing interface is down: " << ipHeader.GetDestinationAddress ());
+internet/model/ipv6-l3-protocol.cc:  // Drop RFC 3849 packets: 2001:db8::/32
+internet/model/ipv6-l3-protocol.cc:      NS_LOG_WARN ("Received a packet for 2001:db8::/32 (documentation class).  Drop.");
+internet/model/ipv6-l3-protocol.cc:      NS_LOG_WARN ("TTL exceeded.  Drop.");
+internet/model/ipv6-l3-protocol.cc:          NS_LOG_WARN ("TTL exceeded.  Drop.");
+internet/model/ipv6-l3-protocol.cc:  bool isDropped = false;
+internet/model/ipv6-l3-protocol.cc:          nextHeaderStep = ipv6Extension->Process (p, nextHeaderPosition, ip, dst, &nextHeader, isDropped);
+internet/model/ipv6-l3-protocol.cc:          if (isDropped)
+internet/model/ipv6-l3-protocol.cc:              NS_LOG_LOGIC ("Unknown Next Header. Drop!");
+internet/model/udp-socket-impl.cc:    .AddTraceSource ("Drop", "Drop UDP packet due to receive buffer overflow",
+internet/model/udp-socket-impl.cc:      NS_LOG_WARN ("No receive buffer space available.  Drop.");
+internet/model/udp-socket-impl.cc:      NS_LOG_WARN ("No receive buffer space available.  Drop.");
+internet/model/arp-cache.cc:    .AddTraceSource ("Drop",
+internet/doc/ipv6.rst: * `Drop`, Drop IPv6 packet.
+internet/doc/ipv6.rst: * `Drop`, Drop IPv6 packet.
+internet/helper/internet-stack-helper.cc: * protocol.  The trace accessor in the cache is given the name "Drop."  When
+internet/helper/internet-stack-helper.cc: * A second trace hook lives in the ARP L3 protocol (also named "Drop") and may 
+internet/helper/internet-stack-helper.cc: * and "Drop" (ns3::Ipv4L3Protocol::m_dropTrace) trace sources.
+internet/helper/internet-stack-helper.cc: * The "Drop" trace is fired in any case where the packet is dropped (in both
+internet/helper/internet-stack-helper.cc: *   address is dropped and the "Drop" trace is fired if the "don't fragement"
+internet/helper/internet-stack-helper.cc: *   broadcast address is dropped and the "Drop" trace is hit if fragmentation
+internet/helper/internet-stack-helper.cc: *   "Drop" trace event fires with a reference to the copied packet.
+internet/helper/internet-stack-helper.cc: *   and the "Drop" trace event fires if no route to the remote host is found.
+internet/helper/internet-stack-helper.cc: *   is dropped and the "Drop" trace is fired if the "don't fragement" bit is 
+internet/helper/internet-stack-helper.cc: *   is dropped and the "Drop" trace is hit if fragmentation is not available 
+internet/helper/internet-stack-helper.cc: * - An outgoing packet being routed is dropped and the "Drop" trace event fires
+internet/helper/internet-stack-helper.cc: *   ns3::Ipv4L3Protocol::DoForward), the packet is dropped and the "Drop" trace 
+internet/helper/internet-stack-helper.cc: * "Drop" (see ns3::UdpSocketImpl::m_dropTrace).  This is set when a packet
+internet/helper/internet-stack-helper.cc:Ipv4L3ProtocolDropSinkWithoutContext (
+internet/helper/internet-stack-helper.cc:  Ipv4L3Protocol::DropReason reason, 
+internet/helper/internet-stack-helper.cc:Ipv4L3ProtocolDropSinkWithContext (
+internet/helper/internet-stack-helper.cc:  Ipv4L3Protocol::DropReason reason, 
+internet/helper/internet-stack-helper.cc:          asciiTraceHelper.HookDefaultDropSinkWithoutContext<ArpL3Protocol> (arpL3Protocol, "Drop", theStream);
+internet/helper/internet-stack-helper.cc:          bool result = ipv4L3Protocol->TraceConnectWithoutContext ("Drop",
+internet/helper/internet-stack-helper.cc:                                                                    MakeBoundCallback (&Ipv4L3ProtocolDropSinkWithoutContext, theStream));
+internet/helper/internet-stack-helper.cc:                         "Unable to connect ipv4L3Protocol \"Drop\"");
+internet/helper/internet-stack-helper.cc:      // For the ARP Drop, we are going to use the default trace sink provided by 
+internet/helper/internet-stack-helper.cc:      oss << "/NodeList/" << node->GetId () << "/$ns3::ArpL3Protocol/Drop";
+internet/helper/internet-stack-helper.cc:      Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, stream));
+internet/helper/internet-stack-helper.cc:      oss << "/NodeList/" << node->GetId () << "/$ns3::Ipv4L3Protocol/Drop";
+internet/helper/internet-stack-helper.cc:      Config::Connect (oss.str (), MakeBoundCallback (&Ipv4L3ProtocolDropSinkWithContext, stream));
+internet/helper/internet-stack-helper.cc:Ipv6L3ProtocolDropSinkWithoutContext (
+internet/helper/internet-stack-helper.cc:  Ipv6L3Protocol::DropReason reason, 
+internet/helper/internet-stack-helper.cc:Ipv6L3ProtocolDropSinkWithContext (
+internet/helper/internet-stack-helper.cc:  Ipv6L3Protocol::DropReason reason, 
+internet/helper/internet-stack-helper.cc:          bool result = ipv6L3Protocol->TraceConnectWithoutContext ("Drop",
+internet/helper/internet-stack-helper.cc:                                                                    MakeBoundCallback (&Ipv6L3ProtocolDropSinkWithoutContext, theStream));
+internet/helper/internet-stack-helper.cc:                         "Unable to connect ipv6L3Protocol \"Drop\"");
+internet/helper/internet-stack-helper.cc:      oss << "/NodeList/" << node->GetId () << "/$ns3::Ipv6L3Protocol/Drop";
+internet/helper/internet-stack-helper.cc:      Config::Connect (oss.str (), MakeBoundCallback (&Ipv6L3ProtocolDropSinkWithContext, stream));
+internet/test/error-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+internet/test/error-net-device.cc:    .AddTraceSource ("PhyRxDrop",
+internet/test/error-net-device.cc:                     MakeTraceSourceAccessor (&ErrorNetDevice::m_phyRxDropTrace))
+internet/test/error-net-device.cc:      m_phyRxDropTrace (packet);
+lte/test/lte-test-rlc-am-e2e.h:    void DlDropEvent (Ptr<const Packet> p);
+lte/test/lte-test-rlc-am-e2e.h:    void UlDropEvent (Ptr<const Packet> p);
+lte/test/lte-test-rlc-am-e2e.h:    uint32_t m_dlDrops;
+lte/test/lte-test-rlc-am-e2e.h:    uint32_t m_ulDrops;
+lte/test/lte-test-rlc-um-e2e.h:    void DlDropEvent (Ptr<const Packet> p);
+lte/test/lte-test-rlc-um-e2e.h:    void UlDropEvent (Ptr<const Packet> p);
+lte/test/lte-test-rlc-um-e2e.h:    uint32_t m_dlDrops;
+lte/test/lte-test-rlc-um-e2e.h:    uint32_t m_ulDrops;
+lte/test/lte-test-rlc-am-e2e.cc:  m_dlDrops = 0;
+lte/test/lte-test-rlc-am-e2e.cc:  m_ulDrops = 0;
+lte/test/lte-test-rlc-am-e2e.cc:LteRlcAmE2eTestCase::DlDropEvent (Ptr<const Packet> p)
+lte/test/lte-test-rlc-am-e2e.cc:  m_dlDrops++;
+lte/test/lte-test-rlc-am-e2e.cc:LteRlcAmE2eTestCase::UlDropEvent (Ptr<const Packet> p)
+lte/test/lte-test-rlc-am-e2e.cc:  m_ulDrops++;
+lte/test/lte-test-rlc-am-e2e.cc:  ueLteDevs.Get (0)->TraceConnectWithoutContext ("PhyRxDrop", MakeCallback (&LteRlcAmE2eTestCase::DlDropEvent, this));
+lte/test/lte-test-rlc-am-e2e.cc://   enbLteDevs.Get (0)->TraceConnectWithoutContext ("PhyRxDrop", MakeCallback (&LteRlcAmE2eTestCase::EnbDropEvent, this));
+lte/test/lte-test-rlc-am-e2e.cc:  // NS_LOG_INFO ("dl dev drops = " << m_dlDrops);
+lte/test/lte-test-rlc-am-e2e.cc:  // NS_LOG_INFO ("ul dev drops = " << m_ulDrops);
+lte/test/lte-test-rlc-am-e2e.cc:  NS_LOG_INFO (m_seed << "\t" << m_losses << "\t" << txEnbRrcPdus << "\t" << rxUeRrcPdus << "\t" << m_dlDrops);
+lte/test/lte-test-rlc-um-e2e.cc:  m_dlDrops = 0;
+lte/test/lte-test-rlc-um-e2e.cc:  m_ulDrops = 0;
+lte/test/lte-test-rlc-um-e2e.cc:LteRlcUmE2eTestCase::DlDropEvent (Ptr<const Packet> p)
+lte/test/lte-test-rlc-um-e2e.cc:  m_dlDrops++;
+lte/test/lte-test-rlc-um-e2e.cc:LteRlcUmE2eTestCase::UlDropEvent (Ptr<const Packet> p)
+lte/test/lte-test-rlc-um-e2e.cc:  m_ulDrops++;
+lte/test/lte-test-rlc-um-e2e.cc:  ueLteDevs.Get (0)->TraceConnectWithoutContext ("PhyRxDrop", MakeCallback (&LteRlcUmE2eTestCase::DlDropEvent, this));
+lte/test/lte-test-rlc-um-e2e.cc:  enbLteDevs.Get (0)->TraceConnectWithoutContext ("PhyRxDrop", MakeCallback (&LteRlcUmE2eTestCase::UlDropEvent, this));
+lte/test/lte-test-rlc-um-e2e.cc:  // NS_LOG_INFO ("dl dev drops = " << m_dlDrops);
+lte/test/lte-test-rlc-um-e2e.cc:  // NS_LOG_INFO ("ul dev drops = " << m_ulDrops);
+lte/test/lte-test-rlc-um-e2e.cc:  NS_LOG_INFO (m_seed << "\t" << m_losses << "\t" << txEnbRrcPdus << "\t" << rxUeRrcPdus << "\t" << m_dlDrops);
+lte/test/lte-test-rlc-um-e2e.cc:  NS_LOG_INFO (m_seed << "\t" << m_losses << "\t" << txUeRrcPdus << "\t" << rxEnbRrcPdus << "\t" << m_ulDrops);
+lte/test/lte-test-rlc-um-e2e.cc:  NS_TEST_ASSERT_MSG_EQ (txEnbRrcPdus, rxUeRrcPdus + m_dlDrops,
+lte/test/lte-test-rlc-um-e2e.cc:                         "Downlink: TX PDUs (" << txEnbRrcPdus << ") != RX PDUs (" << rxUeRrcPdus << ") + DROPS (" << m_dlDrops << ")");
+lte/test/lte-test-rlc-um-e2e.cc:  NS_TEST_ASSERT_MSG_EQ (txUeRrcPdus, rxEnbRrcPdus + m_ulDrops,
+lte/test/lte-test-rlc-um-e2e.cc:                         "Uplink: TX PDUs (" << txUeRrcPdus << ") != RX PDUs (" << rxEnbRrcPdus << ") + DROPS (" << m_ulDrops << ")");
+Binary file mesh/bindings/modulegen__gcc_ILP32.pyc matches
+mesh/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+mesh/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+mesh/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+mesh/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+mesh/bindings/modulegen__gcc_ILP32.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+mesh/bindings/modulegen__gcc_ILP32.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+mesh/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+mesh/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+mesh/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+mesh/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+mesh/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+mesh/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+mesh/bindings/modulegen__gcc_LP64.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+mesh/bindings/modulegen__gcc_LP64.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+mesh/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+mesh/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+mesh/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+mesh/model/dot11s/hwmp-protocol.h:  bool DropDataFrame (uint32_t seqno, Mac48Address source);
+mesh/model/dot11s/hwmp-protocol.h:    uint16_t totalDropped;
+mesh/model/dot11s/hwmp-protocol-mac.cc:  if ((destination == Mac48Address::GetBroadcast ()) && (m_protocol->DropDataFrame (meshHdr.GetMeshSeqno (),
+mesh/model/dot11s/hwmp-protocol.cc:      m_stats.totalDropped++;
+mesh/model/dot11s/hwmp-protocol.cc:      m_stats.totalDropped++;
+mesh/model/dot11s/hwmp-protocol.cc:HwmpProtocol::DropDataFrame (uint32_t seqno, Mac48Address source)
+mesh/model/dot11s/hwmp-protocol.cc:          m_stats.totalDropped++;
+mesh/model/dot11s/hwmp-protocol.cc:  totalDropped (0),
+mesh/model/dot11s/hwmp-protocol.cc:  "totalDropped=\"" << totalDropped << "\" "
+mesh/model/flame/flame-protocol.h:    uint16_t totalDropped;
+mesh/model/flame/flame-protocol.cc:                  m_stats.totalDropped++;
+mesh/model/flame/flame-protocol.cc:      NS_LOG_DEBUG ("Dropped my own frame!");
+mesh/model/flame/flame-protocol.cc:      m_stats.totalDropped++;
+mesh/model/flame/flame-protocol.cc:  txUnicast (0), txBroadcast (0), txBytes (0), droppedTtl (0), totalDropped (0)
+mesh/model/flame/flame-protocol.cc:  "totalDropped=\"" << totalDropped << "\"/>" << std::endl;
+netanim/bindings/modulegen__gcc_ILP32.py:    ## animation-interface-helper.h (module 'netanim'): void ns3::AnimPacketInfo::ProcessRxDrop(ns3::Ptr<ns3::NetDevice const> nd) [member function]
+netanim/bindings/modulegen__gcc_ILP32.py:    cls.add_method('ProcessRxDrop', 
+netanim/bindings/modulegen__gcc_LP64.py:    ## animation-interface-helper.h (module 'netanim'): void ns3::AnimPacketInfo::ProcessRxDrop(ns3::Ptr<ns3::NetDevice const> nd) [member function]
+netanim/bindings/modulegen__gcc_LP64.py:    cls.add_method('ProcessRxDrop', 
+netanim/model/animation-interface.h:  void WifiPhyTxDropTrace (std::string context,
+netanim/model/animation-interface.h:  void WifiPhyRxDropTrace (std::string context,
+netanim/model/animation-interface.cc:void AnimationInterface::WifiPhyTxDropTrace (std::string context,
+netanim/model/animation-interface.cc:  NS_LOG_INFO ("TxDropTrace for packet:" << AnimUid);
+netanim/model/animation-interface.cc:void AnimationInterface::WifiPhyRxDropTrace (std::string context,
+netanim/helper/animation-interface-helper.cc:void AnimPacketInfo::ProcessRxDrop (Ptr<const NetDevice> nd)
+netanim/helper/animation-interface-helper.h:   * \brief Process RxDrop notifications
+netanim/helper/animation-interface-helper.h:  void ProcessRxDrop (Ptr <const NetDevice> nd);
+network/utils/drop-tail-queue.cc:NS_LOG_COMPONENT_DEFINE ("DropTailQueue");
+network/utils/drop-tail-queue.cc:NS_OBJECT_ENSURE_REGISTERED (DropTailQueue);
+network/utils/drop-tail-queue.cc:TypeId DropTailQueue::GetTypeId (void) 
+network/utils/drop-tail-queue.cc:  static TypeId tid = TypeId ("ns3::DropTailQueue")
+network/utils/drop-tail-queue.cc:    .AddConstructor<DropTailQueue> ()
+network/utils/drop-tail-queue.cc:                   MakeEnumAccessor (&DropTailQueue::SetMode),
+network/utils/drop-tail-queue.cc:                   "The maximum number of packets accepted by this DropTailQueue.",
+network/utils/drop-tail-queue.cc:                   MakeUintegerAccessor (&DropTailQueue::m_maxPackets),
+network/utils/drop-tail-queue.cc:                   "The maximum number of bytes accepted by this DropTailQueue.",
+network/utils/drop-tail-queue.cc:                   MakeUintegerAccessor (&DropTailQueue::m_maxBytes),
+network/utils/drop-tail-queue.cc:                   "The ECN mode switch for DropQueue in the device",
+network/utils/drop-tail-queue.cc:                   MakeUintegerAccessor (&DropTailQueue::m_ecn_mode),
+network/utils/drop-tail-queue.cc:                   MakeUintegerAccessor (&DropTailQueue::m_ecn_threshold),
+network/utils/drop-tail-queue.cc:DropTailQueue::DropTailQueue () :
+network/utils/drop-tail-queue.cc:DropTailQueue::~DropTailQueue ()
+network/utils/drop-tail-queue.cc:DropTailQueue::SetMode (DropTailQueue::QueueMode mode)
+network/utils/drop-tail-queue.cc:DropTailQueue::QueueMode
+network/utils/drop-tail-queue.cc:DropTailQueue::GetMode (void)
+network/utils/drop-tail-queue.cc:DropTailQueue::DoEnqueue (Ptr<Packet> p)
+network/utils/drop-tail-queue.cc:      Drop (p);
+network/utils/drop-tail-queue.cc:      Drop (p);
+network/utils/drop-tail-queue.cc:DropTailQueue::DoDequeue (void)
+network/utils/drop-tail-queue.cc:DropTailQueue::DoPeek (void) const
+network/utils/drop-tail-queue.cc:DropTailQueue::Mark_ECN (Ptr<Packet> p)
+Binary file network/utils/.queue.cc.swp matches
+network/utils/simple-net-device.cc:    .AddTraceSource ("PhyRxDrop",
+network/utils/simple-net-device.cc:                     MakeTraceSourceAccessor (&SimpleNetDevice::m_phyRxDropTrace))
+network/utils/simple-net-device.cc:      m_phyRxDropTrace (packet);
+network/utils/packet-socket.cc:    .AddTraceSource ("Drop", "Drop packet due to receive buffer overflow",
+network/utils/packet-socket.cc:      NS_LOG_WARN ("No receive buffer space available.  Drop.");
+network/utils/red-queue.cc:      else if (DropEarly (p, nQueued))
+network/utils/red-queue.cc:          NS_LOG_DEBUG ("DropEarly returns 1, qAvg="<<m_qAvg <<",minTh="<< m_minTh <<", maxTh="<<m_maxTh);
+network/utils/red-queue.cc:      NS_LOG_LOGIC ("\t Dropping due to Queue Full " << nQueued);
+network/utils/red-queue.cc:      m_stats.qLimDrop++;
+network/utils/red-queue.cc:      			NS_LOG_DEBUG ("\t Dropping due to Prob Mark, normal red queue without ecn. " << m_qAvg);
+network/utils/red-queue.cc:		      m_stats.unforcedDrop++;
+network/utils/red-queue.cc:    		  Drop (p);
+network/utils/red-queue.cc:      NS_LOG_DEBUG ("\t Dropping due to Hard Mark , full queue " << m_qAvg);
+network/utils/red-queue.cc:      m_stats.forcedDrop++;
+network/utils/red-queue.cc:      Drop (p);
+network/utils/red-queue.cc:  m_stats.forcedDrop = 0;
+network/utils/red-queue.cc:  m_stats.unforcedDrop = 0;
+network/utils/red-queue.cc:  m_stats.qLimDrop = 0;
+network/utils/red-queue.cc:RedQueue::DropEarly (Ptr<Packet> p, uint32_t qSize)
+network/utils/red-queue.cc:  // Drop probability is computed, pick random number and act
+network/utils/red-queue.cc:// Returns a probability using these function parameters for the DropEarly funtion
+network/utils/red-queue.cc:// Returns a probability using these function parameters for the DropEarly funtion
+network/utils/drop-tail-queue.h:class DropTailQueue : public Queue {
+network/utils/drop-tail-queue.h:   * \brief DropTailQueue Constructor
+network/utils/drop-tail-queue.h:  DropTailQueue ();
+network/utils/drop-tail-queue.h:  virtual ~DropTailQueue();
+network/utils/drop-tail-queue.h:  void SetMode (DropTailQueue::QueueMode mode);
+network/utils/drop-tail-queue.h:  DropTailQueue::QueueMode GetMode (void);
+network/utils/drop-tail-queue.h:  uint32_t Get_Droptimes()
+network/utils/red-queue.h:    uint32_t unforcedDrop;
+network/utils/red-queue.h:    uint32_t forcedDrop;
+network/utils/red-queue.h:    // Drops due to queue limits
+network/utils/red-queue.h:    uint32_t qLimDrop;
+network/utils/red-queue.h:   * \brief Drop types
+network/utils/red-queue.h:  uint32_t DropEarly (Ptr<Packet> p, uint32_t qSize);
+network/utils/red-queue.h:  // Returns a probability using these function parameters for the DropEarly funtion
+network/utils/red-queue.h:  // Returns a probability using these function parameters for the DropEarly funtion
+network/utils/simple-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+network/utils/queue.h:  uint32_t GetTotalDroppedBytes (void) const;
+network/utils/queue.h:  uint32_t GetTotalDroppedPackets (void) const;
+network/utils/queue.h:  double GetDroppedBytesPerSecondAverage (void);
+network/utils/queue.h:  double GetDroppedPacketsPerSecondAverage (void);
+network/utils/queue.h:  double GetDroppedBytesPerSecondVariance (void);
+network/utils/queue.h:  double GetDroppedPacketsPerSecondVariance (void);
+network/utils/queue.h:  void Drop (Ptr<Packet> packet);
+network/utils/queue.h:  TracedCallback<Ptr<const Packet> > m_traceDrop;
+network/utils/queue.h:  uint32_t m_nTotalDroppedBytes;
+network/utils/queue.h:  uint32_t m_nTotalDroppedPackets;
+network/utils/queue.cc:    .AddTraceSource ("Drop", "Drop a packet stored in the queue.",
+network/utils/queue.cc:                     MakeTraceSourceAccessor (&Queue::m_traceDrop))
+network/utils/queue.cc:  m_nTotalDroppedBytes (0),
+network/utils/queue.cc:  m_nTotalDroppedPackets (0)
+network/utils/queue.cc:  // If DoEnqueue fails, Queue::Drop is called by the subclass
+network/utils/queue.cc:Queue:: GetTotalDroppedBytes (void) const
+network/utils/queue.cc:  NS_LOG_LOGIC ("returns " << m_nTotalDroppedBytes);
+network/utils/queue.cc:  return m_nTotalDroppedBytes;
+network/utils/queue.cc:Queue::GetTotalDroppedPackets (void) const
+network/utils/queue.cc:  NS_LOG_LOGIC ("returns " << m_nTotalDroppedPackets);
+network/utils/queue.cc:  return m_nTotalDroppedPackets;
+network/utils/queue.cc:  m_nTotalDroppedBytes = 0;
+network/utils/queue.cc:  m_nTotalDroppedPackets = 0;
+network/utils/queue.cc:Queue::Drop (Ptr<Packet> p)
+network/utils/queue.cc:  m_nTotalDroppedPackets++;
+network/utils/queue.cc:  m_nTotalDroppedBytes += p->GetSize ();
+network/utils/queue.cc:  NS_LOG_LOGIC ("m_traceDrop (p)");
+network/utils/queue.cc:  m_traceDrop (p);
+Binary file network/utils/.queue.h.swp matches
+Binary file network/bindings/modulegen__gcc_ILP32.pyc matches
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue [class]
+network/bindings/modulegen__gcc_ILP32.py:    module.add_class('DropTailQueue', parent=root_module['ns3::Queue'])
+network/bindings/modulegen__gcc_ILP32.py:    register_Ns3DropTailQueue_methods(root_module, root_module['ns3::DropTailQueue'])
+network/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+network/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+network/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedBytes', 
+network/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedPackets', 
+network/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_method('Drop', 
+network/bindings/modulegen__gcc_ILP32.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::forcedDrop [variable]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('forcedDrop', 'uint32_t', is_const=False)
+network/bindings/modulegen__gcc_ILP32.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::qLimDrop [variable]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('qLimDrop', 'uint32_t', is_const=False)
+network/bindings/modulegen__gcc_ILP32.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::unforcedDrop [variable]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('unforcedDrop', 'uint32_t', is_const=False)
+network/bindings/modulegen__gcc_ILP32.py:def register_Ns3DropTailQueue_methods(root_module, cls):
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue(ns3::DropTailQueue const & arg0) [copy constructor]
+network/bindings/modulegen__gcc_ILP32.py:    cls.add_constructor([param('ns3::DropTailQueue const &', 'arg0')])
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue() [constructor]
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::Queue::QueueMode ns3::DropTailQueue::GetMode() [member function]
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): static ns3::TypeId ns3::DropTailQueue::GetTypeId() [member function]
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): void ns3::DropTailQueue::SetMode(ns3::Queue::QueueMode mode) [member function]
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet> ns3::DropTailQueue::DoDequeue() [member function]
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): bool ns3::DropTailQueue::DoEnqueue(ns3::Ptr<ns3::Packet> p) [member function]
+network/bindings/modulegen__gcc_ILP32.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet const> ns3::DropTailQueue::DoPeek() const [member function]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue [class]
+network/bindings/modulegen__gcc_LP64.py:    module.add_class('DropTailQueue', parent=root_module['ns3::Queue'])
+network/bindings/modulegen__gcc_LP64.py:    register_Ns3DropTailQueue_methods(root_module, root_module['ns3::DropTailQueue'])
+network/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+network/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+network/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedBytes', 
+network/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedPackets', 
+network/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_method('Drop', 
+network/bindings/modulegen__gcc_LP64.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::forcedDrop [variable]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('forcedDrop', 'uint32_t', is_const=False)
+network/bindings/modulegen__gcc_LP64.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::qLimDrop [variable]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('qLimDrop', 'uint32_t', is_const=False)
+network/bindings/modulegen__gcc_LP64.py:    ## red-queue.h (module 'network'): ns3::RedQueue::Stats::unforcedDrop [variable]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('unforcedDrop', 'uint32_t', is_const=False)
+network/bindings/modulegen__gcc_LP64.py:def register_Ns3DropTailQueue_methods(root_module, cls):
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue(ns3::DropTailQueue const & arg0) [copy constructor]
+network/bindings/modulegen__gcc_LP64.py:    cls.add_constructor([param('ns3::DropTailQueue const &', 'arg0')])
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::DropTailQueue::DropTailQueue() [constructor]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::Queue::QueueMode ns3::DropTailQueue::GetMode() [member function]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): static ns3::TypeId ns3::DropTailQueue::GetTypeId() [member function]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): void ns3::DropTailQueue::SetMode(ns3::Queue::QueueMode mode) [member function]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet> ns3::DropTailQueue::DoDequeue() [member function]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): bool ns3::DropTailQueue::DoEnqueue(ns3::Ptr<ns3::Packet> p) [member function]
+network/bindings/modulegen__gcc_LP64.py:    ## drop-tail-queue.h (module 'network'): ns3::Ptr<ns3::Packet const> ns3::DropTailQueue::DoPeek() const [member function]
+network/doc/queue.rst:* DropTail
+network/doc/queue.rst:* ``Drop``
+network/doc/queue.rst:DropTail
+network/doc/queue.rst:  p2p.SetQueue ("ns3::DropTailQueue");
+network/doc/queue.rst:  p2p.SetQueue ("ns3::DropTailQueue");
+network/doc/queue.rst:the Enqueue, Dequeue, and Drop traces of these queues and print out 
+network/doc/error-model.rst:processing chain of the device, and drops should show up on the ``PhyRxDrop``
+network/examples/red-tests.cc:  p2p.SetQueue ("ns3::DropTailQueue");
+network/examples/red-tests.cc:  p2p.SetQueue ("ns3::DropTailQueue");
+network/examples/red-tests.cc:  p2p.SetQueue ("ns3::DropTailQueue");
+network/examples/red-tests.cc:  p2p.SetQueue ("ns3::DropTailQueue");
+network/examples/red-tests.cc:      std::cout << "\t " << st.unforcedDrop << " drops due prob mark" << std::endl;
+network/examples/red-tests.cc:      std::cout << "\t " << st.forcedDrop << " drops due hard mark" << std::endl;
+network/examples/red-tests.cc:      std::cout << "\t " << st.qLimDrop << " drops due queue full" << std::endl;
+network/examples/red-tests.cc:      std::cout << "\t " << st.unforcedDrop << " drops due prob mark" << std::endl;
+network/examples/red-tests.cc:      std::cout << "\t " << st.forcedDrop << " drops due hard mark" << std::endl;
+network/examples/red-tests.cc:      std::cout << "\t " << st.qLimDrop << " drops due queue full" << std::endl;
+network/examples/droptail_vs_red.cc:  std::string queueType = "DropTail";
+network/examples/droptail_vs_red.cc:  cmd.AddValue ("queueType", "Set Queue type to DropTail or RED", queueType);
+network/examples/droptail_vs_red.cc:  if ((queueType != "RED") && (queueType != "DropTail"))
+network/examples/droptail_vs_red.cc:      NS_ABORT_MSG ("Invalid queue type: Use --queueType=RED or --queueType=DropTail");
+network/examples/droptail_vs_red.cc:      Config::SetDefault ("ns3::DropTailQueue::Mode", StringValue ("QUEUE_MODE_PACKETS"));
+network/examples/droptail_vs_red.cc:      Config::SetDefault ("ns3::DropTailQueue::MaxPackets", UintegerValue (maxPackets));
+network/examples/droptail_vs_red.cc:      Config::SetDefault ("ns3::DropTailQueue::Mode", StringValue ("QUEUE_MODE_BYTES"));
+network/examples/droptail_vs_red.cc:      Config::SetDefault ("ns3::DropTailQueue::MaxBytes", UintegerValue (maxPackets * pktSize));
+network/helper/trace-helper.cc:// One of the basic default trace sink sets.  Drop:
+network/helper/trace-helper.cc://   This is typically implemented by hooking the "TxQueue/Drop" trace hook
+network/helper/trace-helper.cc:AsciiTraceHelper::DefaultDropSinkWithoutContext (Ptr<OutputStreamWrapper> stream, Ptr<const Packet> p)
+network/helper/trace-helper.cc:AsciiTraceHelper::DefaultDropSinkWithContext (Ptr<OutputStreamWrapper> stream, std::string context, Ptr<const Packet> p)
+network/helper/trace-helper.h:  void HookDefaultDropSinkWithoutContext (Ptr<T> object, std::string traceName, Ptr<OutputStreamWrapper> stream);
+network/helper/trace-helper.h:  void HookDefaultDropSinkWithContext (Ptr<T> object, 
+network/helper/trace-helper.h:  static void DefaultDropSinkWithoutContext (Ptr<OutputStreamWrapper> file, Ptr<const Packet> p);
+network/helper/trace-helper.h:  static void DefaultDropSinkWithContext (Ptr<OutputStreamWrapper> file, std::string context, Ptr<const Packet> p);
+network/helper/trace-helper.h:AsciiTraceHelper::HookDefaultDropSinkWithoutContext (Ptr<T> object, std::string tracename, Ptr<OutputStreamWrapper> file)
+network/helper/trace-helper.h:    object->TraceConnectWithoutContext (tracename, MakeBoundCallback (&DefaultDropSinkWithoutContext, file));
+network/helper/trace-helper.h:  NS_ASSERT_MSG (result == true, "AsciiTraceHelper::HookDefaultDropSinkWithoutContext():  Unable to hook \"" 
+network/helper/trace-helper.h:AsciiTraceHelper::HookDefaultDropSinkWithContext (
+network/helper/trace-helper.h:    object->TraceConnect (tracename, context, MakeBoundCallback (&DefaultDropSinkWithContext, stream));
+network/helper/trace-helper.h:  NS_ASSERT_MSG (result == true, "AsciiTraceHelper::HookDefaultDropSinkWithContext():  Unable to hook \"" 
+network/test/red-queue-test-suite.cc:  NS_TEST_EXPECT_MSG_EQ (st.unforcedDrop, 0, "There should zero dropped packets due probability mark");
+network/test/red-queue-test-suite.cc:  NS_TEST_EXPECT_MSG_EQ (st.forcedDrop, 0, "There should zero dropped packets due hardmark mark");
+network/test/red-queue-test-suite.cc:  NS_TEST_EXPECT_MSG_EQ (st.qLimDrop, 0, "There should zero dropped packets due queue full");
+network/test/red-queue-test-suite.cc:  drop.test3 = st.unforcedDrop + st.forcedDrop + st.qLimDrop;
+network/test/red-queue-test-suite.cc:  drop.test4 = st.unforcedDrop + st.forcedDrop + st.qLimDrop;
+network/test/red-queue-test-suite.cc:  drop.test5 = st.unforcedDrop + st.forcedDrop + st.qLimDrop;
+network/test/red-queue-test-suite.cc:  drop.test6 = st.unforcedDrop + st.forcedDrop + st.qLimDrop;
+network/test/red-queue-test-suite.cc:  drop.test7 = st.unforcedDrop + st.forcedDrop + st.qLimDrop;
+network/test/error-model-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+network/test/error-model-test-suite.cc:  : TestCase ("ErrorModel and PhyRxDrop trace for SimpleNetDevice"), m_count (0), m_drops (0)
+network/test/error-model-test-suite.cc:ErrorModelSimple::DropEvent (Ptr<const Packet> p)
+network/test/error-model-test-suite.cc:  output->TraceConnectWithoutContext ("PhyRxDrop", MakeCallback (&ErrorModelSimple::DropEvent, this));
+network/test/error-model-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+network/test/error-model-test-suite.cc:  : TestCase ("ErrorModel and PhyRxDrop trace for SimpleNetDevice"), m_count (0), m_drops (0)
+network/test/error-model-test-suite.cc:BurstErrorModelSimple::DropEvent (Ptr<const Packet> p)
+network/test/error-model-test-suite.cc:  output->TraceConnectWithoutContext ("PhyRxDrop", MakeCallback (&BurstErrorModelSimple::DropEvent, this));
+network/test/drop-tail-queue-test-suite.cc:class DropTailQueueTestCase : public TestCase
+network/test/drop-tail-queue-test-suite.cc:  DropTailQueueTestCase ();
+network/test/drop-tail-queue-test-suite.cc:DropTailQueueTestCase::DropTailQueueTestCase ()
+network/test/drop-tail-queue-test-suite.cc:DropTailQueueTestCase::DoRun (void)
+network/test/drop-tail-queue-test-suite.cc:  Ptr<DropTailQueue> queue = CreateObject<DropTailQueue> ();
+network/test/drop-tail-queue-test-suite.cc:static class DropTailQueueTestSuite : public TestSuite
+network/test/drop-tail-queue-test-suite.cc:  DropTailQueueTestSuite ()
+network/test/drop-tail-queue-test-suite.cc:    AddTestCase (new DropTailQueueTestCase (), TestCase::QUICK);
+olsr/model/olsr-routing-protocol.cc:/// \brief Drops a given packet because it couldn't be delivered to the corresponding
+olsr/examples/simple-point-to-point-olsr.cc:// - DropTail queues 
+olsr/examples/simple-point-to-point-olsr.cc:  //DefaultValue::Bind ("DropTailQueue::m_maxPackets", 30);
+openflow/model/openflow-interface.cc:DropController::ReceiveFromSwitch (Ptr<OpenFlowSwitchNetDevice> swtch, ofpbuf* buffer)
+openflow/model/openflow-interface.cc:      NS_LOG_INFO ("No actions set to this flow. Dropping packet.");
+openflow/model/openflow-interface.h: * Demonstration of a Drop controller. When a connected switch
+openflow/model/openflow-interface.h:class DropController : public Controller
+openflow/model/openflow-switch-net-device.h: * There are two controllers available in the original package. DropController
+openflow/doc/openflow-switch.rst:demonstrate this, a DropController, which creates flows for ignoring every single
+openflow/doc/openflow-switch.rst:                             OFPC_FRAG_DROP (Drop fragments),
+openflow/examples/openflow-switch.cc:// - DropTail queues
+openflow/examples/openflow-switch.cc:SetDrop (std::string value)
+openflow/examples/openflow-switch.cc:  cmd.AddValue ("d", "Use Drop Controller (Learning if not specified).", MakeCallback (&SetDrop));
+openflow/examples/openflow-switch.cc:  cmd.AddValue ("drop", "Use Drop Controller (Learning if not specified).", MakeCallback (&SetDrop));
+openflow/examples/openflow-switch.cc:      Ptr<ns3::ofi::DropController> controller = CreateObject<ns3::ofi::DropController> ();
+Binary file point-to-point/bindings/modulegen__gcc_ILP32.pyc matches
+point-to-point/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+point-to-point/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+point-to-point/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+point-to-point/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedBytes', 
+point-to-point/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+point-to-point/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedPackets', 
+point-to-point/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+point-to-point/bindings/modulegen__gcc_ILP32.py:    cls.add_method('Drop', 
+point-to-point/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+point-to-point/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+point-to-point/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+point-to-point/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedBytes', 
+point-to-point/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+point-to-point/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedPackets', 
+point-to-point/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+point-to-point/bindings/modulegen__gcc_LP64.py:    cls.add_method('Drop', 
+point-to-point/model/point-to-point-net-device.cc:    .AddTraceSource ("MacTxDrop", 
+point-to-point/model/point-to-point-net-device.cc:                     MakeTraceSourceAccessor (&PointToPointNetDevice::m_macTxDropTrace))
+point-to-point/model/point-to-point-net-device.cc:    .AddTraceSource ("MacRxDrop", 
+point-to-point/model/point-to-point-net-device.cc:                     MakeTraceSourceAccessor (&PointToPointNetDevice::m_macRxDropTrace))
+point-to-point/model/point-to-point-net-device.cc:    .AddTraceSource ("PhyTxDrop", 
+point-to-point/model/point-to-point-net-device.cc:                     MakeTraceSourceAccessor (&PointToPointNetDevice::m_phyTxDropTrace))
+point-to-point/model/point-to-point-net-device.cc:    .AddTraceSource ("PhyRxDrop", 
+point-to-point/model/point-to-point-net-device.cc:                     MakeTraceSourceAccessor (&PointToPointNetDevice::m_phyRxDropTrace))
+point-to-point/model/point-to-point-net-device.cc:      m_phyTxDropTrace (p);
+point-to-point/model/point-to-point-net-device.cc:      m_phyRxDropTrace (packet);
+point-to-point/model/point-to-point-net-device.cc:      m_macTxDropTrace (packet);
+point-to-point/model/point-to-point-net-device.cc:          m_macTxDropTrace (packet);
+point-to-point/model/point-to-point-net-device.h:   * method such as DropTail or RED.
+point-to-point/model/point-to-point-net-device.h:   * @see DropTailQueue
+point-to-point/model/point-to-point-net-device.h:   * @see class DropTailQueue
+point-to-point/model/point-to-point-net-device.h:  TracedCallback<Ptr<const Packet> > m_macTxDropTrace;
+point-to-point/model/point-to-point-net-device.h:  TracedCallback<Ptr<const Packet> > m_macRxDropTrace;
+point-to-point/model/point-to-point-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyTxDropTrace;
+point-to-point/model/point-to-point-net-device.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+point-to-point/doc/point-to-point.rst:* Drop:  A trace source for dropped packets.
+point-to-point/doc/point-to-point.rst:* A Drop operation source (see ns3::Queue::m_traceDrop).
+point-to-point/examples/main-attribute-value.cc:  // (this default can be observed in the function DropTailQueue::GetTypeId)
+point-to-point/examples/main-attribute-value.cc:  Config::SetDefault ("ns3::DropTailQueue::MaxPackets", StringValue ("80"));
+point-to-point/examples/main-attribute-value.cc:  Config::SetDefault ("ns3::DropTailQueue::MaxPackets", UintegerValue (80));
+point-to-point/examples/main-attribute-value.cc:  Ptr<Queue> q = CreateObject<DropTailQueue> ();
+point-to-point/examples/main-attribute-value.cc:  // DropTailQueue to it.
+point-to-point/examples/main-attribute-value.cc:  // instantiated DropTailQueue.  Here are various ways to do that.
+point-to-point/examples/main-attribute-value.cc:  // to a DropTailQueue, where MaxPackets is a member
+point-to-point/examples/main-attribute-value.cc:  Ptr<DropTailQueue> dtq = txQueue->GetObject <DropTailQueue> ();
+point-to-point/helper/point-to-point-helper.cc:  m_queueFactory.SetTypeId ("ns3::DropTailQueue");
+point-to-point/helper/point-to-point-helper.cc:      asciiTraceHelper.HookDefaultDropSinkWithoutContext<Queue> (queue, "Drop", theStream);
+point-to-point/helper/point-to-point-helper.cc:      // PhyRxDrop trace source for "d" event
+point-to-point/helper/point-to-point-helper.cc:      asciiTraceHelper.HookDefaultDropSinkWithoutContext<PointToPointNetDevice> (device, "PhyRxDrop", theStream);
+point-to-point/helper/point-to-point-helper.cc:  oss << "/NodeList/" << nodeid << "/DeviceList/" << deviceid << "/$ns3::PointToPointNetDevice/TxQueue/Drop";
+point-to-point/helper/point-to-point-helper.cc:  Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, stream));
+point-to-point/helper/point-to-point-helper.cc:  oss << "/NodeList/" << nodeid << "/DeviceList/" << deviceid << "/$ns3::PointToPointNetDevice/PhyRxDrop";
+point-to-point/helper/point-to-point-helper.cc:  Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, stream));
+point-to-point/test/point-to-point-test.cc:  devA->SetQueue (CreateObject<DropTailQueue> ());
+point-to-point/test/point-to-point-test.cc:  devB->SetQueue (CreateObject<DropTailQueue> ());
+Binary file point-to-point-layout/bindings/modulegen__gcc_ILP32.pyc matches
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    ## ipv6-l3-protocol.h (module 'internet'): ns3::Ipv6L3Protocol::DropReason [enumeration]
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_UNKNOWN_PROTOCOL'], outer_class=root_module['ns3::Ipv6L3Protocol'], import_from_module='ns.internet')
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point-layout/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    ## ipv6-l3-protocol.h (module 'internet'): ns3::Ipv6L3Protocol::DropReason [enumeration]
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_UNKNOWN_PROTOCOL'], outer_class=root_module['ns3::Ipv6L3Protocol'], import_from_module='ns.internet')
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+point-to-point-layout/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+Binary file spectrum/bindings/modulegen__gcc_ILP32.pyc matches
+spectrum/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+spectrum/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedBytes', 
+spectrum/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+spectrum/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetTotalDroppedPackets', 
+spectrum/bindings/modulegen__gcc_ILP32.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+spectrum/bindings/modulegen__gcc_ILP32.py:    cls.add_method('Drop', 
+spectrum/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedBytes() const [member function]
+spectrum/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedBytes', 
+spectrum/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): uint32_t ns3::Queue::GetTotalDroppedPackets() const [member function]
+spectrum/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetTotalDroppedPackets', 
+spectrum/bindings/modulegen__gcc_LP64.py:    ## queue.h (module 'network'): void ns3::Queue::Drop(ns3::Ptr<ns3::Packet> packet) [member function]
+spectrum/bindings/modulegen__gcc_LP64.py:    cls.add_method('Drop', 
+spectrum/model/aloha-noack-net-device.cc:    .AddTraceSource ("MacTxDrop",
+spectrum/model/aloha-noack-net-device.cc:                     MakeTraceSourceAccessor (&AlohaNoackNetDevice::m_macTxDropTrace))
+spectrum/model/aloha-noack-net-device.cc:              m_macTxDropTrace (packet);
+spectrum/model/aloha-noack-net-device.cc:          m_macTxDropTrace (packet);
+spectrum/model/aloha-noack-net-device.h:  TracedCallback<Ptr<const Packet> > m_macTxDropTrace;
+spectrum/helper/adhoc-aloha-noack-ideal-phy-helper.cc:  m_queue.SetTypeId ("ns3::DropTailQueue");
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaBroadcastTestCase::DropEvent (Ptr<const Packet> p)
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaMulticastTestCase::DropEvent (Ptr<const Packet> p)
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaOneSubnetTestCase::DropEvent (Ptr<const Packet> p)
+test/csma-system-test-suite.cc:// - DropTail queues 
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaPacketSocketTestCase::DropEvent (Ptr<const Packet> p)
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaPingTestCase::DropEvent (Ptr<const Packet> p)
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaRawIpSocketTestCase::DropEvent (Ptr<const Packet> p)
+test/csma-system-test-suite.cc:  void DropEvent (Ptr<const Packet> p);
+test/csma-system-test-suite.cc:CsmaStarTestCase::DropEvent (Ptr<const Packet> p)
+test/ns3tcp/ns3tcp-state-test-suite.cc:  Config::SetDefault ("ns3::DropTailQueue::MaxPackets", UintegerValue (20));
+test/ns3tcp/ns3tcp-cwnd-test-suite.cc:  Config::SetDefault ("ns3::DropTailQueue::MaxPackets", UintegerValue (4));
+test/ns3tcp/trTidy.pl:    s|/PhyRxDrop||;
+Binary file uan/bindings/modulegen__gcc_ILP32.pyc matches
+uan/bindings/modulegen__gcc_ILP32.py:    ## uan-phy.h (module 'uan'): void ns3::UanPhy::NotifyRxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+uan/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+uan/bindings/modulegen__gcc_ILP32.py:    ## uan-phy.h (module 'uan'): void ns3::UanPhy::NotifyTxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+uan/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+uan/bindings/modulegen__gcc_LP64.py:    ## uan-phy.h (module 'uan'): void ns3::UanPhy::NotifyRxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+uan/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+uan/bindings/modulegen__gcc_LP64.py:    ## uan-phy.h (module 'uan'): void ns3::UanPhy::NotifyTxDrop(ns3::Ptr<const ns3::Packet> packet) [member function]
+uan/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+uan/model/uan-transducer-hd.cc:      src->NotifyTxDrop(packet);           // traced source netanim
+uan/model/uan-phy-gen.cc:      NS_LOG_DEBUG ("Energy depleted, node cannot transmit any packet. Dropping.");
+uan/model/uan-phy-gen.cc:      NS_LOG_DEBUG ("PHY requested to TX while already Transmitting.  Dropping packet.");
+uan/model/uan-phy-gen.cc:      NS_LOG_DEBUG ("PHY requested to TX while sleeping.  Dropping packet.");
+uan/model/uan-phy-gen.cc:      NS_LOG_DEBUG ("Energy depleted, node cannot receive any packet. Dropping.");
+uan/model/uan-phy-gen.cc:      NotifyRxDrop(pkt);    // traced source netanim
+uan/model/uan-phy-gen.cc:      NotifyRxDrop(pkt);    // traced source netanim
+uan/model/uan-phy-gen.cc:      NS_LOG_DEBUG ("Sleep mode. Dropping packet.");
+uan/model/uan-phy-gen.cc:      NotifyRxDrop(pkt);    // traced source netanim
+uan/model/uan-phy-gen.cc:      NS_LOG_DEBUG ("Sleep mode or dead. Dropping packet");
+uan/model/uan-phy-gen.cc:      NotifyRxDrop(pkt);    // traced source netanim
+uan/model/uan-phy.cc:    .AddTraceSource ("PhyTxDrop",
+uan/model/uan-phy.cc:                     MakeTraceSourceAccessor (&UanPhy::m_phyTxDropTrace))
+uan/model/uan-phy.cc:    .AddTraceSource ("PhyRxDrop",
+uan/model/uan-phy.cc:                     MakeTraceSourceAccessor (&UanPhy::m_phyRxDropTrace))
+uan/model/uan-phy.cc:UanPhy::NotifyTxDrop (Ptr<const Packet> packet)
+uan/model/uan-phy.cc:  m_phyTxDropTrace (packet);
+uan/model/uan-phy.cc:UanPhy::NotifyRxDrop (Ptr<const Packet> packet)
+uan/model/uan-phy.cc:  m_phyRxDropTrace (packet);
+uan/model/uan-phy.h:   * Public method used to fire a PhyTxDrop trace.  Implemented for encapsulation
+uan/model/uan-phy.h:  void NotifyTxDrop (Ptr<const Packet> packet);
+uan/model/uan-phy.h:   * Public method used to fire a PhyRxDrop trace.  Implemented for encapsulation
+uan/model/uan-phy.h:  void NotifyRxDrop (Ptr<const Packet> packet);
+uan/model/uan-phy.h:  TracedCallback<Ptr<const Packet> > m_phyTxDropTrace;
+uan/model/uan-phy.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+virtual-net-device/examples/virtual-net-device.cc:// - DropTail queues 
+virtual-net-device/examples/virtual-net-device.cc:  //DefaultValue::Bind ("DropTailQueue::m_maxPackets", 30);
+Binary file visualizer/bindings/modulegen__gcc_ILP32.pyc matches
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample [struct]
+visualizer/bindings/modulegen__gcc_ILP32.py:    module.add_class('PacketDropSample', outer_class=root_module['ns3::PyViz'])
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+visualizer/bindings/modulegen__gcc_ILP32.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+visualizer/bindings/modulegen__gcc_ILP32.py:    module.add_container('std::vector< ns3::PyViz::PacketDropSample >', 'ns3::PyViz::PacketDropSample', container_type='vector')
+visualizer/bindings/modulegen__gcc_ILP32.py:    register_Ns3PyVizPacketDropSample_methods(root_module, root_module['ns3::PyViz::PacketDropSample'])
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): std::vector<ns3::PyViz::PacketDropSample,std::allocator<ns3::PyViz::PacketDropSample> > ns3::PyViz::GetPacketDropSamples() const [member function]
+visualizer/bindings/modulegen__gcc_ILP32.py:    cls.add_method('GetPacketDropSamples', 
+visualizer/bindings/modulegen__gcc_ILP32.py:                   'std::vector< ns3::PyViz::PacketDropSample >', 
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): void ns3::PyViz::RegisterDropTracePath(std::string const & tracePath) [member function]
+visualizer/bindings/modulegen__gcc_ILP32.py:    cls.add_method('RegisterDropTracePath', 
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::LastPacketsSample::lastDroppedPackets [variable]
+visualizer/bindings/modulegen__gcc_ILP32.py:    cls.add_instance_attribute('lastDroppedPackets', 'std::vector< ns3::PyViz::PacketSample >', is_const=False)
+visualizer/bindings/modulegen__gcc_ILP32.py:def register_Ns3PyVizPacketDropSample_methods(root_module, cls):
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::PacketDropSample() [constructor]
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::PacketDropSample(ns3::PyViz::PacketDropSample const & arg0) [copy constructor]
+visualizer/bindings/modulegen__gcc_ILP32.py:    cls.add_constructor([param('ns3::PyViz::PacketDropSample const &', 'arg0')])
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::bytes [variable]
+visualizer/bindings/modulegen__gcc_ILP32.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::transmitter [variable]
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample [struct]
+visualizer/bindings/modulegen__gcc_LP64.py:    module.add_class('PacketDropSample', outer_class=root_module['ns3::PyViz'])
+visualizer/bindings/modulegen__gcc_LP64.py:    ## ipv4-l3-protocol.h (module 'internet'): ns3::Ipv4L3Protocol::DropReason [enumeration]
+visualizer/bindings/modulegen__gcc_LP64.py:    module.add_enum('DropReason', ['DROP_TTL_EXPIRED', 'DROP_NO_ROUTE', 'DROP_BAD_CHECKSUM', 'DROP_INTERFACE_DOWN', 'DROP_ROUTE_ERROR', 'DROP_FRAGMENT_TIMEOUT'], outer_class=root_module['ns3::Ipv4L3Protocol'], import_from_module='ns.internet')
+visualizer/bindings/modulegen__gcc_LP64.py:    module.add_container('std::vector< ns3::PyViz::PacketDropSample >', 'ns3::PyViz::PacketDropSample', container_type='vector')
+visualizer/bindings/modulegen__gcc_LP64.py:    register_Ns3PyVizPacketDropSample_methods(root_module, root_module['ns3::PyViz::PacketDropSample'])
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): std::vector<ns3::PyViz::PacketDropSample,std::allocator<ns3::PyViz::PacketDropSample> > ns3::PyViz::GetPacketDropSamples() const [member function]
+visualizer/bindings/modulegen__gcc_LP64.py:    cls.add_method('GetPacketDropSamples', 
+visualizer/bindings/modulegen__gcc_LP64.py:                   'std::vector< ns3::PyViz::PacketDropSample >', 
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): void ns3::PyViz::RegisterDropTracePath(std::string const & tracePath) [member function]
+visualizer/bindings/modulegen__gcc_LP64.py:    cls.add_method('RegisterDropTracePath', 
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::LastPacketsSample::lastDroppedPackets [variable]
+visualizer/bindings/modulegen__gcc_LP64.py:    cls.add_instance_attribute('lastDroppedPackets', 'std::vector< ns3::PyViz::PacketSample >', is_const=False)
+visualizer/bindings/modulegen__gcc_LP64.py:def register_Ns3PyVizPacketDropSample_methods(root_module, cls):
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::PacketDropSample() [constructor]
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::PacketDropSample(ns3::PyViz::PacketDropSample const & arg0) [copy constructor]
+visualizer/bindings/modulegen__gcc_LP64.py:    cls.add_constructor([param('ns3::PyViz::PacketDropSample const &', 'arg0')])
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::bytes [variable]
+visualizer/bindings/modulegen__gcc_LP64.py:    ## pyviz.h (module 'visualizer'): ns3::PyViz::PacketDropSample::transmitter [variable]
+visualizer/model/pyviz.cc:  Config::Connect ("/NodeList/*/DeviceList/*/TxQueue/Drop",
+visualizer/model/pyviz.cc:                   MakeCallback (&PyViz::TraceDevQueueDrop, this));
+visualizer/model/pyviz.cc:  Config::Connect ("/NodeList/*/$ns3::Ipv4L3Protocol/Drop",
+visualizer/model/pyviz.cc:                   MakeCallback (&PyViz::TraceIpv4Drop, this));
+visualizer/model/pyviz.cc:PyViz::RegisterDropTracePath (std::string const &tracePath)
+visualizer/model/pyviz.cc:  Config::Connect (tracePath, MakeCallback (&PyViz::TraceDevQueueDrop, this));
+visualizer/model/pyviz.cc:  m_packetDrops.clear ();
+visualizer/model/pyviz.cc:PyViz::TraceDevQueueDrop (std::string context, Ptr<const Packet> packet)
+visualizer/model/pyviz.cc:      last.lastDroppedPackets.push_back (lastPacket);
+visualizer/model/pyviz.cc:      while (last.lastDroppedPackets.size () > captureOptions->numLastPackets)
+visualizer/model/pyviz.cc:          last.lastDroppedPackets.erase (last.lastDroppedPackets.begin ());
+visualizer/model/pyviz.cc:  std::map<Ptr<Node>, uint32_t>::iterator iter = m_packetDrops.find (node);
+visualizer/model/pyviz.cc:  if (iter == m_packetDrops.end ())
+visualizer/model/pyviz.cc:      m_packetDrops[node] = packet->GetSize ();
+visualizer/model/pyviz.cc:PyViz::TraceIpv4Drop (std::string context, ns3::Ipv4Header const &hdr, Ptr<const Packet> packet,
+visualizer/model/pyviz.cc:                      ns3::Ipv4L3Protocol::DropReason reason, Ptr<Ipv4> dummy_ipv4, uint32_t interface)
+visualizer/model/pyviz.cc:  TraceDevQueueDrop (context, packetCopy);
+visualizer/model/pyviz.cc:PyViz::PacketDropSampleList
+visualizer/model/pyviz.cc:PyViz::GetPacketDropSamples () const
+visualizer/model/pyviz.cc:  NS_LOG_DEBUG ("GetPacketDropSamples BEGIN");
+visualizer/model/pyviz.cc:  PacketDropSampleList list;
+visualizer/model/pyviz.cc:       iter = m_packetDrops.begin ();
+visualizer/model/pyviz.cc:       iter !=  m_packetDrops.end ();
+visualizer/model/pyviz.cc:      PacketDropSample sample;
+visualizer/model/pyviz.cc:  NS_LOG_DEBUG ("GetPacketDropSamples END");
+visualizer/model/pyviz.h:  void RegisterDropTracePath (std::string const &tracePath);
+visualizer/model/pyviz.h:  struct PacketDropSample
+visualizer/model/pyviz.h:  typedef std::vector<PacketDropSample> PacketDropSampleList;
+visualizer/model/pyviz.h:  PacketDropSampleList GetPacketDropSamples () const;
+visualizer/model/pyviz.h:    std::vector<PacketSample> lastDroppedPackets;
+visualizer/model/pyviz.h:  std::map<Ptr<Node>, uint32_t> m_packetDrops;
+visualizer/model/pyviz.h:  void TraceDevQueueDrop (std::string context, Ptr<const Packet> packet);
+visualizer/model/pyviz.h:  void TraceIpv4Drop (std::string context, ns3::Ipv4Header const &hdr, Ptr<const Packet> packet,
+visualizer/model/pyviz.h:                      ns3::Ipv4L3Protocol::DropReason reason, Ptr<Ipv4> dummy_ipv4, uint32_t interface);
+visualizer/visualizer/core.py:        drops = self.simulation.sim_helper.GetPacketDropSamples()
+visualizer/visualizer/plugins/show_last_packets.py:        self.drop_list.update(self.node, last_packets.lastDroppedPackets)
+Binary file wifi/bindings/modulegen__gcc_ILP32.pyc matches
+wifi/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+wifi/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+wifi/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+wifi/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+wifi/bindings/modulegen__gcc_ILP32.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+wifi/bindings/modulegen__gcc_ILP32.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+wifi/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+wifi/bindings/modulegen__gcc_ILP32.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+wifi/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<ns3::Packet const> p) [member function]
+wifi/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+wifi/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<ns3::Packet const> p) [member function]
+wifi/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+wifi/bindings/modulegen__gcc_LP64.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+wifi/bindings/modulegen__gcc_LP64.py:    ## wifi-mac.h (module 'wifi'): void ns3::WifiMac::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+wifi/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyRxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+wifi/bindings/modulegen__gcc_LP64.py:    ## wifi-phy.h (module 'wifi'): void ns3::WifiPhy::NotifyTxDrop(ns3::Ptr<ns3::Packet const> packet) [member function]
+wifi/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+wifi/model/wifi-mac.cc:    .AddTraceSource ("MacTxDrop",
+wifi/model/wifi-mac.cc:                     MakeTraceSourceAccessor (&WifiMac::m_macTxDropTrace))
+wifi/model/wifi-mac.cc:    .AddTraceSource ("MacRxDrop",
+wifi/model/wifi-mac.cc:                     MakeTraceSourceAccessor (&WifiMac::m_macRxDropTrace))
+wifi/model/wifi-mac.cc:WifiMac::NotifyTxDrop (Ptr<const Packet> packet)
+wifi/model/wifi-mac.cc:  m_macTxDropTrace (packet);
+wifi/model/wifi-mac.cc:WifiMac::NotifyRxDrop (Ptr<const Packet> packet)
+wifi/model/wifi-mac.cc:  m_macRxDropTrace (packet);
+wifi/model/yans-wifi-phy.cc:      NotifyRxDrop (packet);
+wifi/model/yans-wifi-phy.cc:      NotifyRxDrop (packet);
+wifi/model/yans-wifi-phy.cc:      NotifyRxDrop (packet);
+wifi/model/yans-wifi-phy.cc:          NotifyRxDrop (packet);
+wifi/model/yans-wifi-phy.cc:      NotifyRxDrop (packet);
+wifi/model/sta-wifi-mac.cc:      NotifyTxDrop (packet);
+wifi/model/sta-wifi-mac.cc:      NotifyRxDrop (packet);
+wifi/model/sta-wifi-mac.cc:          NotifyRxDrop (packet);
+wifi/model/sta-wifi-mac.cc:          NotifyRxDrop (packet);
+wifi/model/sta-wifi-mac.cc:          NotifyRxDrop (packet);
+wifi/model/sta-wifi-mac.cc:      NotifyRxDrop (packet);
+wifi/model/wifi-phy.h:   * Public method used to fire a PhyTxDrop trace.  Implemented for encapsulation
+wifi/model/wifi-phy.h:  void NotifyTxDrop (Ptr<const Packet> packet);
+wifi/model/wifi-phy.h:   * Public method used to fire a PhyRxDrop trace.  Implemented for encapsulation
+wifi/model/wifi-phy.h:  void NotifyRxDrop (Ptr<const Packet> packet);
+wifi/model/wifi-phy.h:  TracedCallback<Ptr<const Packet> > m_phyTxDropTrace;
+wifi/model/wifi-phy.h:  TracedCallback<Ptr<const Packet> > m_phyRxDropTrace;
+wifi/model/wifi-phy.cc:    .AddTraceSource ("PhyTxDrop",
+wifi/model/wifi-phy.cc:                     MakeTraceSourceAccessor (&WifiPhy::m_phyTxDropTrace))
+wifi/model/wifi-phy.cc:    .AddTraceSource ("PhyRxDrop",
+wifi/model/wifi-phy.cc:                     MakeTraceSourceAccessor (&WifiPhy::m_phyRxDropTrace))
+wifi/model/wifi-phy.cc:WifiPhy::NotifyTxDrop (Ptr<const Packet> packet)
+wifi/model/wifi-phy.cc:  m_phyTxDropTrace (packet);
+wifi/model/wifi-phy.cc:WifiPhy::NotifyRxDrop (Ptr<const Packet> packet)
+wifi/model/wifi-phy.cc:  m_phyRxDropTrace (packet);
+wifi/model/ap-wifi-mac.cc:          NotifyRxDrop (packet);
+wifi/model/ap-wifi-mac.cc:          NotifyRxDrop (packet);
+wifi/model/wifi-mac.h:   * Public method used to fire a MacTxDrop trace.  Implemented for encapsulation
+wifi/model/wifi-mac.h:  void NotifyTxDrop (Ptr<const Packet> packet);
+wifi/model/wifi-mac.h:   * Public method used to fire a MacRxDrop trace.  Implemented for encapsulation
+wifi/model/wifi-mac.h:  void NotifyRxDrop (Ptr<const Packet> packet);
+wifi/model/wifi-mac.h:  TracedCallback<Ptr<const Packet> > m_macTxDropTrace;
+wifi/model/wifi-mac.h:  TracedCallback<Ptr<const Packet> > m_macRxDropTrace;
+Binary file wimax/bindings/modulegen__gcc_ILP32.pyc matches
+wimax/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+wimax/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithContext', 
+wimax/bindings/modulegen__gcc_ILP32.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+wimax/bindings/modulegen__gcc_ILP32.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+wimax/bindings/modulegen__gcc_ILP32.py:    ## simple-ofdm-wimax-phy.h (module 'wimax'): void ns3::SimpleOfdmWimaxPhy::NotifyRxDrop(ns3::Ptr<ns3::PacketBurst> burst) [member function]
+wimax/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyRxDrop', 
+wimax/bindings/modulegen__gcc_ILP32.py:    ## simple-ofdm-wimax-phy.h (module 'wimax'): void ns3::SimpleOfdmWimaxPhy::NotifyTxDrop(ns3::Ptr<ns3::PacketBurst> burst) [member function]
+wimax/bindings/modulegen__gcc_ILP32.py:    cls.add_method('NotifyTxDrop', 
+wimax/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithContext(ns3::Ptr<ns3::OutputStreamWrapper> file, std::string context, ns3::Ptr<const ns3::Packet> p) [member function]
+wimax/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithContext', 
+wimax/bindings/modulegen__gcc_LP64.py:    ## trace-helper.h (module 'network'): static void ns3::AsciiTraceHelper::DefaultDropSinkWithoutContext(ns3::Ptr<ns3::OutputStreamWrapper> file, ns3::Ptr<const ns3::Packet> p) [member function]
+wimax/bindings/modulegen__gcc_LP64.py:    cls.add_method('DefaultDropSinkWithoutContext', 
+wimax/bindings/modulegen__gcc_LP64.py:    ## simple-ofdm-wimax-phy.h (module 'wimax'): void ns3::SimpleOfdmWimaxPhy::NotifyRxDrop(ns3::Ptr<ns3::PacketBurst> burst) [member function]
+wimax/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyRxDrop', 
+wimax/bindings/modulegen__gcc_LP64.py:    ## simple-ofdm-wimax-phy.h (module 'wimax'): void ns3::SimpleOfdmWimaxPhy::NotifyTxDrop(ns3::Ptr<ns3::PacketBurst> burst) [member function]
+wimax/bindings/modulegen__gcc_LP64.py:    cls.add_method('NotifyTxDrop', 
+wimax/model/simple-ofdm-wimax-phy.cc:    .AddTraceSource ("PhyTxDrop",
+wimax/model/simple-ofdm-wimax-phy.cc:                     MakeTraceSourceAccessor (&SimpleOfdmWimaxPhy::m_phyTxDropTrace))
+wimax/model/simple-ofdm-wimax-phy.cc:    .AddTraceSource ("PhyRxDrop",
+wimax/model/simple-ofdm-wimax-phy.cc:                     MakeTraceSourceAccessor (&SimpleOfdmWimaxPhy::m_phyRxDropTrace));
+wimax/model/simple-ofdm-wimax-phy.cc:          NotifyRxDrop (burst);
+wimax/model/simple-ofdm-wimax-phy.cc:SimpleOfdmWimaxPhy::NotifyTxDrop (Ptr<PacketBurst> burst)
+wimax/model/simple-ofdm-wimax-phy.cc:  m_phyTxDropTrace (burst);
+wimax/model/simple-ofdm-wimax-phy.cc:SimpleOfdmWimaxPhy::NotifyRxDrop (Ptr<PacketBurst> burst)
+wimax/model/simple-ofdm-wimax-phy.cc:  m_phyRxDropTrace (burst);
+wimax/model/ss-net-device.cc:    .AddTraceSource ("SSTxDrop",
+wimax/model/ss-net-device.cc:                     MakeTraceSourceAccessor (&SubscriberStationNetDevice::m_ssTxDropTrace))
+wimax/model/ss-net-device.cc:    .AddTraceSource ("SSRxDrop",
+wimax/model/ss-net-device.cc:                     MakeTraceSourceAccessor (&SubscriberStationNetDevice::m_ssRxDropTrace));
+wimax/model/ss-net-device.cc:          m_ssTxDropTrace (packet);
+wimax/model/ss-net-device.cc:      m_ssTxDropTrace (packet);
+wimax/model/ss-net-device.cc:          m_ssRxDropTrace (packet);
+wimax/model/ss-net-device.h:  TracedCallback<Ptr<const Packet> > m_ssTxDropTrace;
+wimax/model/ss-net-device.h:  TracedCallback<Ptr<const Packet> > m_ssRxDropTrace;
+wimax/model/wimax-mac-queue.h:  TracedCallback<Ptr<const Packet> > m_traceDrop;
+wimax/model/simple-ofdm-wimax-phy.h:   * Public method used to fire a PhyTxDrop trace.  Implemented for encapsulation
+wimax/model/simple-ofdm-wimax-phy.h:  void NotifyTxDrop (Ptr<PacketBurst> burst);
+wimax/model/simple-ofdm-wimax-phy.h:   * Public method used to fire a PhyRxDrop trace.  Implemented for encapsulation
+wimax/model/simple-ofdm-wimax-phy.h:  void NotifyRxDrop (Ptr<PacketBurst> burst);
+wimax/model/simple-ofdm-wimax-phy.h:  TracedCallback<Ptr<PacketBurst > > m_phyTxDropTrace;
+wimax/model/simple-ofdm-wimax-phy.h:  TracedCallback<Ptr<PacketBurst > > m_phyRxDropTrace;
+wimax/model/bs-net-device.cc:    .AddTraceSource ("BSTxDrop",
+wimax/model/bs-net-device.cc:                     MakeTraceSourceAccessor (&BaseStationNetDevice::m_bsTxDropTrace))
+wimax/model/bs-net-device.cc:    .AddTraceSource ("BSRxDrop",
+wimax/model/bs-net-device.cc:                     MakeTraceSourceAccessor (&BaseStationNetDevice::m_bsRxDropTrace));
+wimax/model/bs-net-device.cc:      m_bsTxDropTrace (packet);
+wimax/model/bs-net-device.cc:          m_bsTxDropTrace (packet);
+wimax/model/bs-net-device.cc:      m_bsTxDropTrace (packet);
+wimax/model/bs-net-device.cc:          m_bsRxDropTrace (packet);
+wimax/model/bs-net-device.h:  TracedCallback<Ptr<const Packet> > m_bsTxDropTrace;
+wimax/model/bs-net-device.h:  TracedCallback<Ptr<const Packet> > m_bsRxDropTrace;
+wimax/model/wimax-mac-queue.cc:    .AddTraceSource ("Drop",
+wimax/model/wimax-mac-queue.cc:                     "Drop trace",
+wimax/model/wimax-mac-queue.cc:                     MakeTraceSourceAccessor (&WimaxMacQueue::m_traceDrop))
+wimax/model/wimax-mac-queue.cc:      m_traceDrop (packet);
+wimax/helper/wimax-helper.cc:      << "/TxQueue/Drop";
+wimax/helper/wimax-helper.cc:  Config::Connect (oss.str (), MakeBoundCallback (&AsciiTraceHelper::DefaultDropSinkWithContext, os));

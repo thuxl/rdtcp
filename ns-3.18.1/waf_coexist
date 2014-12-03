@@ -1,0 +1,29 @@
+#! /bin/sh
+
+
+
+longflowsize=10
+offerload=0
+
+num_of_flows_of_each_protocols=2
+num_of_flows_of_each_protocols=$1
+#node=`echo "$file+1"|bc `
+
+echo "-*-*-*-*-*-*-*-*-offerload=$offerload, flows per protocol=$num_of_flows_of_each_protocols-*-*-*-*-*-*-*-*-*-*"
+
+echo "tcp";date
+#./waf --run "scratch/Coexist  --offerload=$offerload --ECNMode=0  --DCTCPMode=0 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --longflowsize=$longflowsize --num_of_flows_of_each_protocols=$num_of_flows_of_each_protocols" >dataset/coexist/"$num_of_flows_of_each_protocols"flow_each_protocol/tmp_tcp
+
+echo "dctcp";date
+#./waf --run "scratch/Coexist  --offerload=$offerload --ECNMode=1  --DCTCPMode=1 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10  --longflowsize=$longflowsize --num_of_flows_of_each_protocols=$num_of_flows_of_each_protocols" >dataset/coexist/"$num_of_flows_of_each_protocols"flow_each_protocol/tmp_dctcp
+
+echo "rtcp";date
+#./waf --run "scratch/Coexist  --offerload=$offerload --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10  --longflowsize=$longflowsize --num_of_flows_of_each_protocols=$num_of_flows_of_each_protocols" >dataset/coexist/"$num_of_flows_of_each_protocols"flow_each_protocol/tmp_rtcp 
+
+echo "rdtcp";date
+./waf --run "scratch/Coexist  --offerload=$offerload  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10  --longflowsize=$longflowsize --num_of_flows_of_each_protocols=$num_of_flows_of_each_protocols" >dataset/coexist/"$num_of_flows_of_each_protocols"flow_each_protocol/tmp_rdtcp
+
+echo "ictcp";date
+#./waf --run "scratch/Coexist  --offerload=$offerload  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=1  --RDTCPMode=0  --rto_min=10  --longflowsize=$longflowsize --num_of_flows_of_each_protocols=$num_of_flows_of_each_protocols" >dataset/coexist/"$num_of_flows_of_each_protocols"flow_each_protocol/tmp_ictcp
+
+date

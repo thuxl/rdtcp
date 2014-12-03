@@ -1,0 +1,33 @@
+#! /bin/sh
+
+
+
+servers_in_group=20
+servers_in_group=$1
+
+
+offerload=0
+#1 MB = 1048576 B
+longflowsize=1048576
+
+#file=$1
+#node=`echo "$file+1"|bc `
+
+echo "-*-*-*-*-*-*-*-*-servers in group=$servers_in_group -*-*-*-*-*-*-*-*-*-*"
+
+echo "tcp";date
+#./waf --run "scratch/Multiple --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --ECNMode=0  --DCTCPMode=0 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --servers_in_group=$servers_in_group --longflowsize=$longflowsize " >dataset/multiple/servers_in_group_"$servers_in_group"/tmp_tcp
+
+echo "dctcp";date
+#./waf --run "scratch/Multiple --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --ECNMode=1  --DCTCPMode=1 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --servers_in_group=$servers_in_group --longflowsize=$longflowsize " >dataset/multiple/servers_in_group_"$servers_in_group"/tmp_dctcp
+
+echo "rtcp";date
+#./waf --run "scratch/Multiple --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --servers_in_group=$servers_in_group --longflowsize=$longflowsize " >dataset/multiple/servers_in_group_"$servers_in_group"/tmp_rtcp 
+
+echo "rdtcp";date
+./waf --run "scratch/Multiple --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10 --servers_in_group=$servers_in_group --longflowsize=$longflowsize " >dataset/multiple/servers_in_group_"$servers_in_group"/tmp_rdtcp
+
+echo "ictcp";date
+#./waf --run "scratch/Multiple --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=1  --RDTCPMode=0  --rto_min=10 --servers_in_group=$servers_in_group --longflowsize=$longflowsize " >dataset/multiple/servers_in_group_"$servers_in_group"/tmp_ictcp
+
+date

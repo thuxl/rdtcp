@@ -1,0 +1,24 @@
+#! /bin/sh
+
+
+file=50
+node=51
+
+
+file=$1
+node=`echo "$file+1"|bc `
+
+echo "file=$file, node=$node"
+
+./waf --run "scratch/DataCenter --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=0  --DCTCPMode=0 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  " >dataset/incast/rto10/32k/$file/tmp_tcp
+
+./waf --run "scratch/DataCenter --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=1  --DCTCPMode=1 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  " >dataset/incast/rto10/32k/$file/tmp_dctcp
+
+./waf --run "scratch/DataCenter --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  " >dataset/incast/rto10/32k/$file/tmp_rtcp 
+
+#########./waf --run "scratch/DataCenter --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=0 --rto_min=10 --MachinesPerRack=$node  " >dataset/incast/rto10/32k/$file/tmp_rdtcp
+
+./waf --run "scratch/DataCenter --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10 --MachinesPerRack=$node   --no_priority=0 " >dataset/incast/rto10/32k/$file/tmp_rdtcp
+
+./waf --run "scratch/DataCenter --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=1  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  " >dataset/incast/rto10/32k/$file/tmp_ictcp
+

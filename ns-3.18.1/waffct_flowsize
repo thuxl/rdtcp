@@ -1,0 +1,21 @@
+#! /bin/sh
+
+#50 100 200 400 600 800
+flowsize=50
+flowsize=$1
+
+file=30
+node=`echo "$file+1"|bc `
+
+echo "file=$file, node=$node, flowsize=${flowsize}kb"
+
+#./waf --run "scratch/FCT --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=0  --DCTCPMode=0 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --flowsize=$flowsize" >dataset/fct/varying_flowsize_fix_30_senders/${flowsize}k/tmp_tcp
+
+#./waf --run "scratch/FCT --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=1  --DCTCPMode=1 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --flowsize=$flowsize" >dataset/fct/varying_flowsize_fix_30_senders/${flowsize}k/tmp_dctcp
+
+#./waf --run "scratch/FCT --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --flowsize=$flowsize" >dataset/fct/varying_flowsize_fix_30_senders/${flowsize}k/tmp_rtcp 
+
+./waf --run "scratch/FCT --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10 --MachinesPerRack=$node  --flowsize=$flowsize" >dataset/fct/varying_flowsize_fix_30_senders/${flowsize}k/tmp_rdtcp
+
+#./waf --run "scratch/FCT --NumberofRacks=1 --NumberofApps=1 --Stop=10 --UseLongFlows=0  --Use_RED_Mode=0  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=1  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --flowsize=$flowsize" >dataset/fct/varying_flowsize_fix_30_senders/${flowsize}k/tmp_ictcp
+

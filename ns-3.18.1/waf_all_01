@@ -1,0 +1,37 @@
+#! /bin/sh
+
+
+
+echo "offerload============"
+
+./waf_offerload 0;  ./waf_offerload 10;  ./waf_offerload 20;  ./waf_offerload 30;  ./waf_offerload 40;  ./waf_offerload 50;  ./waf_offerload 60;  ./waf_offerload 70;  ./waf_offerload 80;  ./waf_offerload 90; cd dataset/offerload/0/longflow5_30M/0/ ; ./get_data ;./get_drops ; cd ../10/ ; ./get_data ;./get_drops ; cd ../20/ ; ./get_data ;./get_drops ; cd ../30/ ; ./get_data ;./get_drops ; cd ../40/ ; ./get_data ;./get_drops ; cd ../50/ ; ./get_data ;./get_drops ; cd ../60/ ; ./get_data ;./get_drops ; cd ../70/ ; ./get_data ;./get_drops ; cd ../80/ ; ./get_data ;./get_drops ; cd ../90/ ; ./get_data ;./get_drops ; 
+
+
+
+echo "incast============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ; ./waf_incast 10 ;./waf_incast 20 ;./waf_incast 30 ;./waf_incast 40 ;./waf_incast 50 ;./waf_incast 60 ;./waf_incast 70 ;./waf_incast 80 ;./waf_incast 90 ;./waf_incast 100 ; cd dataset/incast/rto10/32k/10/ ;  ./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../20/; ./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../30/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../40/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../50/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../60/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../70/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../80/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../90/;./get_files ; ./get_final_goodput ; ./get_droptimes ; cd ../100/;./get_files ; ./get_final_goodput ; ./get_droptimes ; 
+
+
+
+echo "fct node============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ; ./waffct_nodes 10; ./waffct_nodes 20; ./waffct_nodes 30; ./waffct_nodes 40;./waffct_nodes 50;./waffct_nodes 60; ./waffct_nodes 70;./waffct_nodes 80;./waffct_nodes 90;./waffct_nodes 100; cd dataset/fct/varying_num_of_nodes_fix_32kb/10/ ; ./get_fct ; cd ../20/; ./get_fct ; cd ../30/;./get_fct ; cd ../40/;./get_fct ; cd ../50/;./get_fct ; cd ../60/;./get_fct ; cd ../70/;./get_fct ; cd ../80/;./get_fct ; cd ../90/;./get_fct ; cd ../100/;./get_fct ; 
+
+
+echo "fct flowsize============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ;  ./waffct_flowsize 50; ./waffct_flowsize 100; ./waffct_flowsize 200; ./waffct_flowsize 400; ./waffct_flowsize 600; ./waffct_flowsize 800; cd dataset/fct/varying_flowsize_fix_30_senders/50k/ ; ./get_files ; ./get_final_goodput ;./get_fct ; cd ../100k/; ./get_files ; ./get_final_goodput ;./get_fct ; cd ../200k/;  ./get_files ; ./get_final_goodput ;./get_fct ; cd ../400k/; ./get_files ; ./get_final_goodput ;./get_fct ; cd ../600k/;  ./get_files ; ./get_final_goodput ;./get_fct ; cd ../800k/; ./get_files ; ./get_final_goodput ;./get_fct ;
+
+
+echo "burst============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ; ./waf_burstiness 0; ./waf_burstiness 60; cd dataset/burstiness/0/ ;   ./get_files ; ./get_fct ; ./get_final_goodput ; cd ../60; ./get_files ; ./get_fct ; ./get_final_goodput ; 
+
+
+echo "multiple============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ; ./waf_multiple 20 ; cd dataset/multiple/servers_in_group_20/ ; ./get_files ; ./get_data ; 
+
+
+echo "convergence============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ; ./waf_convergence ; cd dataset/convergence/5to1/ ; ./get_files ; 
+
+
+echo "coexist============"
+cd ~/RDTCP/ns-allinone-3.18.1-rdtcp-queuecontroller/ns-3.18.1/ ; ./waf_coexist 2; cd dataset/coexist/2flow_each_protocol/ ; ./get_files ; ./get_final_goodput ; ./get_droptimes ;

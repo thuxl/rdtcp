@@ -1,0 +1,41 @@
+#! /bin/sh
+
+
+
+
+offerload=$1
+
+node=40
+longflowsize=30
+# shortflowdistribution = 1 use uniform
+# shortflowdistribution = 0 use pareto
+shortflowdistribution=0  
+
+
+#file=$1
+#node=`echo "$file+1"|bc `
+
+echo "-*-*-*-*-*-*-*-*-offerload=$offerload, node per rack=$node -*-*-*-*-*-*-*-*-*-*"
+
+echo "tcp";date
+#./waf --run "scratch/OfferLoadDataCenter --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=$shortflowdistribution --ECNMode=0  --DCTCPMode=0 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node --longflowsize=$longflowsize " >dataset/offerload/"$shortflowdistribution"/longflow5_"$longflowsize"M/$offerload/tmp_tcp
+
+echo "dctcp";date
+#./waf --run "scratch/OfferLoadDataCenter --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=$shortflowdistribution --ECNMode=1  --DCTCPMode=1 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/offerload/"$shortflowdistribution"/longflow5_"$longflowsize"M/$offerload/tmp_dctcp
+
+echo "rtcp";date
+#./waf --run "scratch/OfferLoadDataCenter --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=$shortflowdistribution --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/offerload/"$shortflowdistribution"/longflow5_"$longflowsize"M/$offerload/tmp_rtcp 
+
+######./waf --run "scratch/OfferLoadDataCenter --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=1 --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=0 --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/offerload/longflow5_"$longflowsize"M/$offerload/tmp_rdtcp
+
+echo "rdtcp";date
+./waf --run "scratch/OfferLoadDataCenter --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=$shortflowdistribution  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/offerload/"$shortflowdistribution"/longflow5_"$longflowsize"M/$offerload/tmp_rdtcp
+
+echo "rdtcp no priority";date
+./waf --run "scratch/OfferLoadDataCenter --no_priority=1 --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=$shortflowdistribution  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/offerload/"$shortflowdistribution"/longflow5_"$longflowsize"M/$offerload/tmp_rdtcp_no_p
+
+
+echo "ictcp";date
+#./waf --run "scratch/OfferLoadDataCenter --NumberofRacks=25 --NumberofApps=5 --Stop=1 --UseLongFlows=1  --offerload=$offerload --uniform_distr=$shortflowdistribution  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=1  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/offerload/"$shortflowdistribution"/longflow5_"$longflowsize"M/$offerload/tmp_ictcp
+
+date

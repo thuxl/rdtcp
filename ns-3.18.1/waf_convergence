@@ -1,0 +1,33 @@
+#! /bin/sh
+
+
+
+
+# original sample frequency is 200 us
+# set sample frequency and calculation to be 0.01 s in tcp_socket_base.cc
+
+
+longflowsize=10
+offerload=0
+
+file=5
+node=`echo "$file+1"|bc `
+
+echo "-*-*-*-*-*-*-*-*-offerload=$offerload longflowsize=$longflowsize node=$node -*-*-*-*-*-*-*-*-*-*"
+
+echo "tcp";date
+#./waf --run "scratch/Convergence --NumberofRacks=1 --NumberofApps=1 --Stop=1 --UseLongFlows=0  --offerload=$offerload --ECNMode=0  --DCTCPMode=0 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node --longflowsize=$longflowsize " >dataset/convergence/"$file"to1/tmp_tcp
+
+echo "dctcp";date
+#./waf --run "scratch/Convergence --NumberofRacks=1 --NumberofApps=1 --Stop=1 --UseLongFlows=0  --offerload=$offerload --ECNMode=1  --DCTCPMode=1 --RTCPMode=0 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/convergence/"$file"to1/tmp_dctcp
+
+echo "rtcp";date
+#./waf --run "scratch/Convergence --NumberofRacks=1 --NumberofApps=1 --Stop=1 --UseLongFlows=0  --offerload=$offerload --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/convergence/"$file"to1/tmp_rtcp 
+
+echo "rdtcp";date
+./waf --run "scratch/Convergence --NumberofRacks=1 --NumberofApps=1 --Stop=1 --UseLongFlows=0  --offerload=$offerload  --ECNMode=1  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=0  --RDTCPMode=1  --RDTCP_CONTROLLER_Mode=1 --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/convergence/"$file"to1/tmp_rdtcp
+
+echo "ictcp";date
+#./waf --run "scratch/Convergence --NumberofRacks=1 --NumberofApps=1 --Stop=1 --UseLongFlows=0  --offerload=$offerload  --ECNMode=0  --DCTCPMode=0 --RTCPMode=1 --ICTCPMode=1  --RDTCPMode=0  --rto_min=10 --MachinesPerRack=$node  --longflowsize=$longflowsize " >dataset/convergence/"$file"to1/tmp_ictcp
+
+date
